@@ -25,15 +25,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # First proj:
-      - name: Build Project1
+      # EcoWheelz:
+      - name: Build EcoWheelz
         working-directory: ./EcoWheelz
         run: |
           npm install
           npm run build
 
-      # Second proj:
-      # - name: Build Project2
+      # SThrillRoll:
+      # - name: Build ThrillRoll
       #   working-directory: ./ThrillRoll
       #   run: |
       #     npm install
