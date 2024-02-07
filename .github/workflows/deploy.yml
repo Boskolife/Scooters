@@ -33,11 +33,11 @@ jobs:
           npm run build
 
       # Second proj:
-      - name: Build Project2
-        working-directory: ./ThrillRoll
-        run: |
-          npm install
-          npm run build
+      # - name: Build Project2
+      #   working-directory: ./ThrillRoll
+      #   run: |
+      #     npm install
+      #     npm run build
           
 
       - name: Setup Pages
