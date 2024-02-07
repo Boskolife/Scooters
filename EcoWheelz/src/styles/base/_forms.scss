@@ -32,9 +32,7 @@ textarea {
 	}
 }
 
-input[attribute="value"] {
-	
-}
+input[attribute="value"] {}
 
 select {
 	-webkit-border-radius: 0;
@@ -54,8 +52,6 @@ input[type='submit'] {
 	-webkit-border-radius: 0;
 	cursor: pointer;
 	font-family: $base-font-sans-serif;
-	
-	&:hover {
-       
-    }
+
+	&:hover {}
 }

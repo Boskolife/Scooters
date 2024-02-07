@@ -1,3 +1,410 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    
+  background-color: $white;
+}
+
+.container {
+  max-width: 1330px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main_section {
+  position: relative;
+  height: auto;
+  @include adaptive-value('padding-top', 190, 160, 1);
+  padding-bottom: 60px;
+  text-align: center;
+
+  .main_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content {
+    position: relative;
+    max-width: 590px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .main_title {
+    color: $white;
+    @include adaptive-value('font-size', 60, 36, 1);
+    font-weight: 800;
+    line-height: 126%;
+    margin-bottom: 15px;
+  }
+
+  .sub_title {
+    color: $white;
+    @include adaptive-value('font-size', 36, 20, 1);
+    line-height: 122%;
+    margin-bottom: 25px;
+    font-weight: 400;
+  }
+
+  .main_text {
+    color: $white;
+    @include adaptive-value('font-size', 24, 16, 1);
+    font-weight: 600;
+    line-height: 115%;
+    margin-bottom: 30px;
+  }
+
+  .main_btn {
+    color: $white;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
+    @include adaptive-value('font-size', 20, 16, 1);
+    font-weight: 600;
+    line-height: 120%;
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.25);
+    min-width: 280px;
+    padding: 14px;
+  }
+}
+
+.tips {
+  @include adaptive-value('padding-top', 80, 30, 1);
+  @include adaptive-value('padding-bottom', 80, 30, 1);
+  background-color: $green;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include media('<desktop') {
+      flex-direction: column;
+    }
+  }
+
+  .tips_text_content {
+    width: 34%;
+
+    @include media('<desktop') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .tips_title {
+    color: $black;
+    @include adaptive-value('font-size', 48, 33, 1);
+    font-weight: 600;
+    line-height: 125%;
+    max-width: 475px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    @include media('<desktop') {
+      max-width: 100%;
+    }
+  }
+
+  .tips_text {
+    color: $gray;
+    @include adaptive-value('font-size', 24, 18, 1);
+    line-height: 115%;
+  }
+
+  .cards_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 63%;
+
+    @include media('<desktop') {
+      width: 100%;
+      justify-content: center;
+    }
+
+    @include media('<690px') {
+      flex-direction: column;
+    }
+  }
+
+  .card {
+    background-color: $white;
+    border-radius: 16px;
+    box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    @include adaptive-value('height', 405, 370, 1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .number {
+    color: $grayDC;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
+    font-size: 128px;
+    @include adaptive-value('font-size', 128, 96, 1);
+    font-weight: 800;
+    line-height: 68%;
+    margin-bottom: 25px;
+    display: inline-block;
+  }
+
+  .card_title {
+    color: $black;
+    @include adaptive-value('font-size', 36, 28, 1);
+    font-weight: 600;
+    line-height: 122%;
+    margin-bottom: 8px;
+  }
+
+  .card_text {
+    color: $black;
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 25px;
+    max-width: 275px;
+    flex: 1 1 auto;
+  }
+
+  .card_btn {
+    color: $white;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    border-radius: 8px;
+    background: $black;
+    padding: 15px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.articles {
+  padding: 30px 0;
+  background-color: #242938;
+
+  .articles_title {
+    color: $white;
+    @include adaptive-value('font-size', 48, 36, 1);
+    font-weight: 600;
+    line-height: 125%;
+    margin-bottom: 30px;
+  }
+
+  .articles_wrap {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+
+    @include media('<desktop') {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+  }
+
+  .post {
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(2) {
+      grid-column: span 2;
+
+      @include media('<desktop') {
+        grid-column: span 1;
+      }
+    }
+    &:nth-child(6) {
+      grid-column: span 2;
+
+      @include media('<desktop') {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  .post_img {
+    min-height: 320px;
+    max-height: 320px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .post_title_wrap {
+    background-color: $white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    height: 100%;
+  }
+
+  .post_title {
+    color: $black;
+    @include adaptive-value('font-size', 20, 16, 1);
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  .arrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.welcome {
+  padding: 30px 0;
+  background-color: $grayF2;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include media('<desktop') {
+      flex-direction: column;
+    }
+  }
+
+  .text_content {
+    width: 60%;
+
+    @include media('<desktop') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .welcome_title {
+    color: $black;
+    @include adaptive-value('font-size', 36, 24, 1);
+    font-weight: 600;
+    line-height: 122%;
+    margin-bottom: 15px;
+  }
+
+  .welcome_text {
+    color: $black;
+    @include adaptive-value('font-size', 20, 16, 1);
+    line-height: 120%;
+
+    @include media('<phone') {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .welcome_img {
+    max-width: 420px;
+    width: 100%;
+  }
+}
+
+.about_us_cards {
+  .card_wrap {
+    &:nth-child(2) {
+      background-color: $grayF2;
+      .card_content {
+        flex-direction: row-reverse;
+
+        @include media('<tablet') {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .card_content {
+    max-width: 1330px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include media('<tablet') {
+      flex-direction: column;
+    }
+  }
+
+  .card_img {
+    width: 32%;
+    height: 420px;
+    min-height: 350px;
+    min-width: 330px;
+    border-radius: 16px;
+    box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+
+    @include media('<tablet') {
+      min-width: 400px;
+    }
+
+    @include media('<phone') {
+      min-width: 100%;
+      height: 300px;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .card_text {
+    width: 62%;
+    text-align: start;
+
+    @include media('<tablet') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .card_title {
+    color: $black;
+    font-size: 36px;
+    @include adaptive-value('font-size', 36, 24, 1);
+    font-weight: 600;
+    line-height: 122%;
+    margin-bottom: 15px;
+    max-width: 540px;
+    width: 100%;
+
+    @include media('<tablet') {
+      max-width: 100%;
+    }
+  }
+
+  .text {
+    color: $black;
+    @include adaptive-value('font-size', 20, 16, 1);
+    line-height: 120%;
+  }
 }

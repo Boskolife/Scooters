@@ -1,30 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoWheelz</title>
+    <link rel="stylesheet" href="/styles/main.scss" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:regular,600,800"
+      rel="stylesheet"
+    />
+    <script type="module" src="/js/main.ts" defer></script>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Title</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
-    <script src="./js/main.js" defer></script>
-</head>
-
-<body>
-    <div id="wrapper">
-        //= templates/header.html
-        <main id="main">
-            <section class="main-section">
-                <div class="container">
-                    <div class="content">
-
-                    </div>
+  <body>
+    {{> header }}
+    <main>
+      <section class="main_section">
+        <img class="main_bg" src="./images/Homepage.webp" alt="scooter" />
+        <div class="container">
+          <div class="content">
+            <h1 class="main_title">Green Machines:</h1>
+            <h2 class="sub_title">Reviews of eco-friendly scooters.</h2>
+            <p class="main_text">
+              Lorem ipsum dolor sit amet consectetur. Nam praesent neque
+              ultrices orci.
+            </p>
+            <a href="#" class="main_btn">Explore</a>
+          </div>
+        </div>
+      </section>
+      <section class="tips">
+        <div class="container">
+          <div class="content">
+            <div class="tips_text_content">
+              <h2 class="tips_title">Hyperscooter buying tips</h2>
+              <p class="tips_text">
+                Get the most out of your ride with an Hyperscooter!
+              </p>
+            </div>
+            <div class="cards_wrap">
+              <div class="card">
+                <span class="number">1</span>
+                <h3 class="card_title">Power</h3>
+                <p class="card_text">
+                  Sustainable Commuting: Articles on how scooters contribute to
+                  sustainable living.
+                </p>
+                <a href="#" class="card_btn">See</a>
+              </div>
+              <div class="card">
+                <span class="number">2</span>
+                <h3 class="card_title">Material</h3>
+                <p class="card_text">
+                  Eco-Friendly Scooter Tech: Innovations in green scooter
+                  technology.
+                </p>
+                <a href="#" class="card_btn">See</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="articles" id="articles">
+        <div class="container">
+          <div class="content">
+            <h2 class="articles_title">Articles</h2>
+            <div class="articles_wrap">
+              <div class="post">
+                <div class="post_img">
+                  <img src="./images/img_1.webp" alt="article image" />
                 </div>
-            </section>
-        </main>
-        //= templates/footer.html
-    </div>
-</body>
-
+                <a href="#" class="post_title_wrap">
+                  <h3 class="post_title">
+                    The Rise of Green Scooters: Revolutionizing Eco-Friendly
+                    Commuting
+                  </h3>
+                  <img class="arrow" src="./images/arrow.svg" alt="arrow" />
+                </a>
+              </div>
+              <div class="post">
+                <div class="post_img">
+                  <img src="./images/img_2.webp" alt="article image" />
+                </div>
+                <a href="#" class="post_title_wrap">
+                  <h3 class="post_title">
+                    Charging Solutions: Exploring different charging options for
+                    electric scooters.
+                  </h3>
+                  <img class="arrow" src="./images/arrow.svg" alt="arrow" />
+                </a>
+              </div>
+              <div class="post">
+                <div class="post_img">
+                  <img src="./images/img_3.webp" alt="article image" />
+                </div>
+                <a href="#" class="post_title_wrap">
+                  <h3 class="post_title">
+                    Electric vs. Gas Scooters: Navigating the Choices for
+                    Personalized Commuting
+                  </h3>
+                  <img class="arrow" src="./images/arrow.svg" alt="arrow" />
+                </a>
+              </div>
+              <div class="post">
+                <div class="post_img">
+                  <img src="./images/img_4.webp" alt="article image" />
+                </div>
+                <a href="#" class="post_title_wrap">
+                  <h3 class="post_title">
+                    Scooter Recycling: How to recycle or repurpose old scooters.
+                  </h3>
+                  <img class="arrow" src="./images/arrow.svg" alt="arrow" />
+                </a>
+              </div>
+              <div class="post">
+                <div class="post_img">
+                  <img src="./images/img_5.webp" alt="article image" />
+                </div>
+                <a href="#" class="post_title_wrap">
+                  <h3 class="post_title">Sustainable Commuting</h3>
+                  <img class="arrow" src="./images/arrow.svg" alt="arrow" />
+                </a>
+              </div>
+              <div class="post">
+                <div class="post_img">
+                  <img src="./images/img_6.webp" alt="article image" />
+                </div>
+                <a href="#" class="post_title_wrap">
+                  <h3 class="post_title">
+                    Environmental Impact: Analyzing the ecological footprint of
+                    scooting.
+                  </h3>
+                  <img class="arrow" src="./images/arrow.svg" alt="arrow" />
+                </a>
+              </div>
+              <div class="post">
+                <div class="post_img">
+                  <img src="./images/img_7.webp" alt="article image" />
+                </div>
+                <a href="#" class="post_title_wrap">
+                  <h3 class="post_title">
+                    Eco-Friendly Rider Profiles: Stories of environmentally
+                    conscious riders.
+                  </h3>
+                  <img class="arrow" src="./images/arrow.svg" alt="arrow" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer }}
+  </body>
 </html>

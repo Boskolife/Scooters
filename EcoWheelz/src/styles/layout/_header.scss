@@ -1,0 +1,78 @@
+#header {
+  @include adaptive-value('padding-top', 60, 25, 1);
+  @include adaptive-value('padding-bottom', 60, 25, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+
+  .header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media('<tablet'){
+        flex-direction: column;
+        row-gap: 30px;
+    }
+  }
+
+  .logo_wrap {
+    display: flex;
+    align-items: center;
+    @include adaptive-value('column-gap', 30, 15, 1);
+
+    @include media('<tablet'){
+        justify-content: space-between;
+        width: 100%;
+    }
+  }
+
+  .logo {
+    max-width: 175px;
+    max-height: 35px;
+    min-width: 130px;
+  }
+
+  .search_wrap {
+    padding: 8px;
+    border-radius: 41px;
+    border: 1px solid $white;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    min-width: 100px;
+
+    .search_icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .search_input {
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      color: $white;
+      padding: 0;
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: $grayDC;
+      font-size: 16px;
+    }
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  .menu_link {
+    color: $white;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
