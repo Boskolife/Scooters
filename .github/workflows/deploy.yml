@@ -33,11 +33,11 @@ jobs:
           npm run build
 
       # SThrillRoll:
-      # - name: Build ThrillRoll
-      #   working-directory: ./ThrillRoll
-      #   run: |
-      #     npm install
-      #     npm run build
+      - name: Build ThrillRoll
+        working-directory: ./ThrillRoll
+        run: |
+          npm install
+          npm run build
           
 
       - name: Setup Pages
