@@ -10,7 +10,10 @@ htmlFiles.forEach((file) => {
 });
 
 export default defineConfig({
-  base: '/EcoWheelz',
+  base: 
+  process.env.NODE_ENV === 'development'
+      ? '/'
+      : '/Scooters/EcoWheelz/dist',
   root: 'src',
   publicDir: '../public',
   plugins: [

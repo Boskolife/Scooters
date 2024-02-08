@@ -10,7 +10,10 @@ htmlFiles.forEach((file) => {
 });
 
 export default defineConfig({
-  base: '/ThrillRoll',
+  base: 
+  process.env.NODE_ENV === 'development'
+      ? '/'
+      : '/Scooters/ThrillRoll/dist',
   root: 'src',
   publicDir: '../public',
   plugins: [
