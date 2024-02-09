@@ -1,19 +1,68 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Glide</title>
+    <link rel="stylesheet" href="/styles/main.scss" />
+    <link rel="website icon" href="./images/favicon.png">
+    <script type="module" src="/js/main.ts" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test</title>
-  <link rel="stylesheet" href="/styles/main.scss">
-  <script type="module" src="/js/main.ts" defer></script>
-</head>
-
-<body>
-  {{> header }}
-  <main>
-
-  </main>
-</body>
-
+  <body>
+    {{> header }}
+    <main>
+      <section class="main">
+        <div class="container">
+          <div class="content">
+            <div class="gallery">
+              <img class="gallery_item" src="./images/main_1.webp" alt="scooter">
+              <img class="gallery_item" src="./images/main_2.webp" alt="scooter">
+              <img class="gallery_item" src="./images/main_3.webp" alt="scooter">
+              <img class="gallery_item" src="./images/main_4.webp" alt="scooter">
+              <img class="gallery_item" src="./images/main_5.webp" alt="scooter">
+              <img class="gallery_item" src="./images/main_6.webp" alt="scooter">
+              <img class="gallery_item" src="./images/main_7.webp" alt="scooter">
+              <img class="gallery_item" src="./images/main_8.webp" alt="scooter">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <img class="logo" src="./images/crop_logo_top.webp" alt="logo">
+        <div class="container">
+          <div class="content">
+            <h2 class="title">About</h2>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur. Volutpat sit laoreet mi a pellentesque lorem. Massa feugiat id diam ultrices in accumsan at netus mauris. Rhoncus malesuada nunc aliquet aliquet. Scelerisque mi amet odio purus sodales. Arcu mi mi pulvinar eros purus enim eget est. Arcu ante iaculis pretium bibendum. Phasellus lacinia pulvinar dolor at pellentesque nec quis. Risus quis enim ornare arcu pretium aliquet. Volutpat sed suspendisse cras viverra lobortis placerat. Scelerisque curabitur mauris tellus interdum lacus justo. Gravida velit odio quis eget. Facilisi a auctor ut sit commodo sed elit. Iaculis ac lacinia ipsum consequat vitae neque mauris. Sagittis diam tincidunt enim sed risus pretium tortor. Pellentesque morbi viverra velit bibendum habitant risus mauris id tincidunt.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <img class="logo" src="./images/crop_logo_bottom.webp" alt="logo">
+        <div class="container">
+          <div class="content">
+            <div class="left_column">
+              <h2 class="contact_title">Contact Us</h2>
+              <a href="tel:+1234567890" class="link">+1234567890</a>
+              <a href="mailto:example@email.com" class="link">example@email.com</a>
+              <a href="#" class="link last">Address</a>
+            </div>
+            <div class="right_column">
+              <h2 class="contact_title right_title">Get the newsletter</h2>
+              <p class="text">
+                Receive product recommendations, reviews and deals three times a week.
+              </p>
+              <form>
+                <input class="mail_input" type="email" placeholder="Enter Your Email">
+                <button class="form_btn" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  {{> footer }}
 </html>
