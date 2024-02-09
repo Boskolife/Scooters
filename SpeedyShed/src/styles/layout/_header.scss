@@ -1,0 +1,111 @@
+#header {
+  padding: 20px 0;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include media('<900px') {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  .links_wrap,
+  .serach_wrap,
+  .menu_list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .links_wrap {
+    @include media('<900px') {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    @include media('<phone') {
+      flex-direction: column;
+    }
+  }
+
+  .serach_wrap {
+    @include media('<900px') {
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+    @include media('<phone') {
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    max-width: 93px;
+  }
+
+  .menu_list {
+    @include adaptive-value('gap', 30, 14, 1);
+  }
+
+  .menu_link {
+    color: $black;
+    font-size: 14px;
+  }
+
+  form {
+    @include media('<phone') {
+      width: 80%;
+    }
+  }
+
+  .input_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 128px;
+    background-color: #f7f8f9;
+    padding: 15px;
+    font-size: 12px;
+
+    @include media('<phone') {
+      max-width: 100%;
+    }
+
+    .search {
+      border: none;
+      background-color: transparent;
+
+      &::placeholder {
+        color: #64748b;
+        font-size: 12px;
+      }
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  .profile_photo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow {
+    width: 16px;
+    height: 16px;
+  }
+}

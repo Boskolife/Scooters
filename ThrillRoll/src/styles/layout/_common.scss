@@ -1,5 +1,10 @@
 body {
-  background-color: blueviolet;
+  background-image: url(../images/bg.webp);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(46.849998474121094px);
 }
 
 html {
@@ -15,6 +20,7 @@ html {
 
 .blogs {
   @include adaptive-value('padding-bottom', 65, 35, 1);
+
   .blogs_title {
     color: $white;
     @include adaptive-value('font-size', 64, 48, 1);
@@ -227,7 +233,7 @@ html {
   @include adaptive-value('padding-bottom', 65, 35, 1);
   background-color: $blue;
 
-  .container{
+  .container {
     max-width: 1140px;
   }
 
@@ -264,7 +270,7 @@ html {
     justify-content: space-between;
     gap: 30px;
 
-    @include media('<desktop'){
+    @include media('<desktop') {
       flex-direction: column;
     }
   }
@@ -276,7 +282,7 @@ html {
     gap: 30px;
     width: 54%;
 
-    @include media('<desktop'){
+    @include media('<desktop') {
       width: 100%;
     }
   }
@@ -298,7 +304,7 @@ html {
     height: 470px;
     @include adaptive-value('height', 470, 300, 1);
 
-    @include media('<desktop'){
+    @include media('<desktop') {
       max-width: 490px;
       width: 100%;
     }

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speedy Shed</title>
+    <link rel="stylesheet" href="/styles/main.scss" />
+    <link rel="website icon" href="./images/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:regular,600,800"
+      rel="stylesheet"
+    />
+    <script type="module" src="/js/main.ts" defer></script>
+  </head>
+
+  <body>
+    {{> header }}
+    <main>
+      <section class="main_section subscribe_page">
+        <div class="container">
+          <div class="content">
+            <span class="tip">Subscribe</span>
+            <div class="main_logo">
+              <img src="./images/logo.webp" alt="logo" />
+            </div>
+            <p class="main_text">
+              Lorem ipsum dolor sit amet consectetur. Vestibulum mattis potenti
+              urna proin. Feugiat commodo ipsum placerat id et amet pharetra
+              diam turpis.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe_section">
+        <div class="container">
+          <div class="content">
+            <div class="text_content">
+              <h2 class="subscribe_title">Subscribe</h2>
+              <p class="subscribe_text">
+                Lorem ipsum dolor sit amet consectetur. Vestibulum mattis
+                potenti urna proin. Feugiat commodo ipsum placerat id et amet
+                pharetra diam turpis.
+              </p>
+              <form>
+                <div class="input_wrap">
+                  <input class="subscribe_input" type="text" placeholder="Name">
+                  <input class="subscribe_input" type="email" placeholder="Email">
+                  <input class="subscribe_input" type="tel" placeholder="Phone">
+                  <button class="form_btn">Submit
+                    <img class="arrow" src="./images/white_arrow.svg" alt="arrow">
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="subscribe_img">
+              <img src="./images/subscribe_img.svg" alt="letter">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer }}
+  </body>
+</html>

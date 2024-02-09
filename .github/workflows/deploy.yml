@@ -33,9 +33,25 @@ jobs:
           npm run build
           rm -rf node_modules
 
-      # SThrillRoll:
+      # ThrillRoll:
       - name: Build ThrillRoll
         working-directory: ./ThrillRoll
+        run: |
+          npm install
+          npm run build
+          rm -rf node_modules
+          
+      # SpeedyShed:
+      - name: Build SpeedyShed
+        working-directory: ./SpeedyShed
+        run: |
+          npm install
+          npm run build
+          rm -rf node_modules
+
+      # UrbanGlide:
+      - name: Build UrbanGlide
+        working-directory: ./UrbanGlide
         run: |
           npm install
           npm run build
