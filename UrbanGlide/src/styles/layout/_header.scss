@@ -1,6 +1,12 @@
 #header {
   @include adaptive-value('padding-top', 30, 20, 1);
   @include adaptive-value('padding-bottom', 30, 20, 1);
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.16) 100%,
+      rgba(255, 255, 255, 0.03) 50%
+    ),
+    #161616;
 
   .container {
     max-width: 1330px;

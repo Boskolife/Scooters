@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Glide</title>
+    <link rel="stylesheet" href="/styles/main.scss" />
+    <link rel="website icon" href="./images/favicon.png" />
+    <script type="module" src="/js/main.ts" defer></script>
+  </head>
+
+  <body>
+    {{> header }}
+    <main>
+      <section class="contact">
+        <img class="logo" src="./images/crop_logo_bottom.webp" alt="logo" />
+        <div class="container">
+          <div class="content">
+            <div class="left_column">
+              <h2 class="contact_title">Contact Us</h2>
+              <a href="tel:+1234567890" class="link">+1234567890</a>
+              <a href="mailto:example@email.com" class="link"
+                >example@email.com</a
+              >
+              <a href="#" class="link last">Address</a>
+            </div>
+            <div class="right_column">
+              <h2 class="contact_title right_title">Get the newsletter</h2>
+              <p class="text">
+                Receive product recommendations, reviews and deals three times a
+                week.
+              </p>
+              <form>
+                <input
+                  class="mail_input"
+                  type="email"
+                  placeholder="Enter Your Email"
+                />
+                <button class="form_btn" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  {{> footer_black }}
+</html>
