@@ -5,3 +5,5 @@
 3.SpeedyShed: https://boskolife.github.io/Scooters/SpeedyShed/dist/index.html
 
 4.UrbanGlide: https://boskolife.github.io/Scooters/UrbanGlide/dist/index.html
+
+4.UrbanGlide: https://boskolife.github.io/Scooters/Scootastic/dist/index.html
