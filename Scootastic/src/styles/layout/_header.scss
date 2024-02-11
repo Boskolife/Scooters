@@ -1,0 +1,46 @@
+#header {
+  @include adaptive-value('padding-top', 30, 15, 1);
+  @include adaptive-value('padding-bottom', 30, 15, 1);
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 128px;
+    background: $purple20;
+    @include adaptive-value('padding-top', 20, 15, 1);
+    @include adaptive-value('padding-bottom', 20, 15, 1);
+    @include adaptive-value('padding-right', 30, 10, 1);
+    @include adaptive-value('padding-left', 30, 10, 1);
+
+    @include media('<phone') {
+      flex-direction: column;
+    }
+  }
+
+  .menu_link {
+    color: $yellow;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 800;
+  }
+
+  .first {
+    @include media('<phone') {
+      order: 2;
+    }
+  }
+  .last {
+    @include media('<phone') {
+      order: 3;
+    }
+  }
+
+  .logo {
+    max-width: 190px;
+
+    @include media('<phone') {
+      order: 1;
+    }
+  }
+}

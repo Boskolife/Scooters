@@ -2,7 +2,7 @@ name: Deploy static pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
 
   workflow_dispatch:
 
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
           npm install
           npm run build
           rm -rf node_modules
-          
+
       # SpeedyShed:
       - name: Build SpeedyShed
         working-directory: ./SpeedyShed
@@ -56,14 +56,21 @@ jobs:
           npm install
           npm run build
           rm -rf node_modules
-          
+
+      # Scootastic:
+      - name: Build Scootastic
+        working-directory: ./Scootastic
+        run: |
+          npm install
+          npm run build
+          rm -rf node_modules
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

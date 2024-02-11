@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCOOTASTIC</title>
+    <link rel="stylesheet" href="/styles/main.scss" />
+    <link rel="website icon" href="./image/favicon.png" />
+    <script type="module" src="/js/main.ts" defer></script>
+  </head>
+
+  <body>
+    {{> header }}
+    <main>
+      <section class="main">
+        <div class="container">
+          <div class="content">
+            <div class="main_img">
+              <img src="./image/main_img.webp" alt="image" />
+            </div>
+            <div class="main_text">
+              <h1 class="main_title">SCOOT ASTIC</h1>
+              <p class="descr">
+                Lorem ipsum dolor sit amet consectetur. Volutpat sit laoreet mi
+                a pellentesque lorem. Massa feugiat id diam ultrices in accumsan
+                at netus mauris. Rhoncus malesuada nunc aliquet aliquet.
+              </p>
+              <a href="#" class="main_btn">read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="line_box">
+          <div class="line">
+            <img src="./image/line.png" alt="line dashed" />
+          </div>
+          <img class="scooter" src="./image/scooter_white.svg" alt="scooter" />
+        </div>
+      </section>
+      <section class="articles">
+        <div class="container">
+          <h2 class="title">ARTICLES</h2>
+          <div class="content">
+            <div class="article">
+              <div class="article_img">
+                <img src="./image/article_1.webp" alt="image not found" />
+              </div>
+              <a href="post.html">
+                <h3 class="article_title">
+                  ScooterMaintenance Mastery:Experttipsfor scooterupkee
+                </h3>
+              </a>
+            </div>
+            <div class="article">
+              <div class="article_img">
+                <img src="./image/article_2.webp" alt="image not found" />
+              </div>
+              <a href="post.html">
+                <h3 class="article_title">
+                  ScooterMaintenance Mastery:Experttipsfor scooterupkee
+                </h3>
+              </a>
+            </div>
+            <div class="article">
+              <div class="article_img">
+                <img src="./image/article_1.webp" alt="image not found" />
+              </div>
+              <a href="post.html">
+                <h3 class="article_title">
+                  ScooterMaintenance Mastery:Experttipsfor scooterupkee
+                </h3>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="line_box">
+          <div class="line">
+            <img src="./image/line.png" alt="line dashed" />
+          </div>
+          <img class="scooter" src="./image/scooter_yellow.svg" alt="scooter" />
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="content">
+            <h2 class="title">Contact Us</h2>
+            <form>
+              <input
+                class="contact_input first"
+                type="text"
+                placeholder="Name"
+              />
+              <input class="contact_input" type="email" placeholder="Email" />
+              <textarea
+                class="contact_area"
+                placeholder="Message..."
+              ></textarea>
+              <button class="contac_btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer }}
+  </body>
+</html>
