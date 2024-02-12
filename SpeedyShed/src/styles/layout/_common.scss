@@ -162,6 +162,8 @@ html {
     justify-content: space-between;
     gap: 10px;
     margin-bottom: 30px;
+    padding: 25px 30px;
+    background-color: $blue;
 
     .arrow {
       width: 32px;
@@ -170,7 +172,7 @@ html {
   }
 
   .title {
-    color: $black;
+    color: $white;
     @include adaptive-value('font-size', 24, 20, 1);
     font-weight: 600;
   }
@@ -531,7 +533,7 @@ html {
 
   .text {
     color: #303030;
-    @include adaptive-value("font-size", 20, 16, 1);
+    @include adaptive-value('font-size', 20, 16, 1);
     font-weight: 600;
     @include adaptive-value('margin-bottom', 30, 15, 1);
     display: inline-block;
@@ -553,5 +555,138 @@ html {
   .name {
     color: #303030;
     font-size: 16px;
+  }
+}
+
+.posts {
+  .article_board {
+    border: 1px solid #acacac;
+    background-color: $white;
+    @include adaptive-value('padding-top', 30, 15, 1);
+    @include adaptive-value('padding-bottom', 30, 15, 1);
+    @include adaptive-value('padding-right', 30, 15, 1);
+    @include adaptive-value('padding-left', 30, 15, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+    @include media('<tablet') {
+      flex-direction: column;
+    }
+  }
+
+  .board_content {
+    text-align: start;
+    width: 44%;
+
+    @include media('<tablet') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .tips {
+    color: $black;
+    @include adaptive-value('font-size', 24, 16, 1);
+    font-weight: 600;
+    @include adaptive-value('margin-bottom', 30, 15, 1);
+    display: inline-block;
+  }
+
+  .board_title {
+    color: $gray;
+    @include adaptive-value('font-size', 36, 24, 1);
+    font-weight: 600;
+    line-height: 125%;
+    margin-bottom: 10px;
+  }
+
+  .board_text {
+    color: #acacac;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+
+  .text {
+    color: $gray;
+    font-size: 16px;
+    line-height: 125%;
+  }
+
+  .board_img {
+    width: 54%;
+    height: 100%;
+
+    @include media('<tablet') {
+      width: 70%;
+    }
+
+    @include media('<phone') {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .post_wrap {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .post {
+    @include adaptive-value('padding-top', 65, 30, 1);
+    @include adaptive-value('padding-bottom', 65, 30, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include media('<desktop'){
+      flex-direction: column;
+    }
+
+    &:nth-child(even){
+      flex-direction: row-reverse;
+
+      @include media('<desktop'){
+        flex-direction: column;
+      }
+    }
+
+    .board_title{
+      margin-bottom: 30px;
+    }
+  }
+
+  .post_content{
+    width: 54%;
+
+    @include media('<desktop'){
+      width: 100%;
+    }
+  }
+
+  .post_img{
+    width: 41%;
+    height: 100%;
+
+    @include media('<desktop'){
+      width: 100%;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
