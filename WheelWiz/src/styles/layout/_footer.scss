@@ -1,0 +1,14 @@
+#footer {
+  background-color: $white;
+  padding: 35px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo{
+    max-width: 180px;
+  }
+}

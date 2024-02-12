@@ -1,0 +1,69 @@
+#header {
+  padding: 15px 0;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include media('<tablet') {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .logo {
+    max-width: 130px;
+  }
+
+  .input_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    border-radius: 128px;
+    border: 4px solid $orange;
+    padding: 8px 15px;
+    @include adaptive-value('width', 400, 100, 1);
+
+    @include media('<phone') {
+      width: 180px;
+    }
+
+    .search {
+      border: none;
+      background-color: transparent;
+      color: $orange;
+      padding: 0;
+      @include adaptive-value('font-size', 20, 16, 1);
+      width: 100%;
+
+      &::placeholder {
+        color: $orange;
+        @include adaptive-value('font-size', 20, 16, 1);
+        font-weight: 500;
+        letter-spacing: 0.6px;
+      }
+    }
+
+    .search_icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include adaptive-value('gap', 30, 15, 1);
+  }
+
+  .menu_link {
+    color: $orange;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 800;
+    letter-spacing: 0.72px;
+  }
+}

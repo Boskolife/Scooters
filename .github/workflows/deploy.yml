@@ -65,6 +65,14 @@ jobs:
           npm run build
           rm -rf node_modules
 
+      # WheelWiz:
+      - name: Build WheelWiz
+        working-directory: ./WheelWiz
+        run: |
+          npm install
+          npm run build
+          rm -rf node_modules
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

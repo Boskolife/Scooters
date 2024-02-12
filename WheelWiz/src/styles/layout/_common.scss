@@ -1,0 +1,417 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1330px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  position: relative;
+
+  .title {
+    color: $orange;
+    @include adaptive-value('font-size', 48, 36, 1);
+    font-weight: 800;
+    letter-spacing: 1.44px;
+    position: absolute;
+    @include adaptive-value('top', 65, 15, 1);
+    @include adaptive-value('left', 65, 15, 1);
+    z-index: 5;
+  }
+
+  .swiper {
+    height: 580px;
+  }
+
+  .slide {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .slide_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+  }
+
+  .slide_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        100deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .slide_title {
+    color: $white;
+    @include adaptive-value('font-size', 48, 36, 1);
+    font-weight: 600;
+    line-height: 90%;
+    letter-spacing: 1.44px;
+    @include adaptive-value('padding-bottom', 170, 100, 1);
+    @include adaptive-value('padding-left', 65, 15, 1);
+    padding-right: 15px;
+    position: relative;
+    z-index: 3;
+    max-width: 850px;
+    width: 100%;
+  }
+
+  .swiper-pagination {
+    bottom: 65px !important;
+
+    @include media('<desktop') {
+      bottom: 45px !important;
+    }
+
+    .swiper-pagination-bullet {
+      border-radius: 128px;
+      background-color: transparent;
+      border: 2px solid $white;
+      width: 16px;
+      height: 16px;
+      transition: all 0.3s ease 0s;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $white;
+      width: 32px;
+      transition: all 0.3s ease 0s;
+    }
+  }
+}
+
+.articles {
+  background-color: $black;
+  @include adaptive-value('padding-top', 65, 35, 1);
+  @include adaptive-value('padding-bottom', 65, 35, 1);
+
+  .title {
+    color: $white;
+    @include adaptive-value('font-size', 48, 36, 1);
+    font-weight: 600;
+    letter-spacing: 1.44px;
+    @include adaptive-value('margin-bottom', 65, 35, 1);
+  }
+
+  .articles_wrap {
+    display: grid;
+    grid-template: 1fr / repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  .articles_body {
+    @include adaptive-value('height', 450, 300, 1);
+    border-radius: 47px;
+    border: 12px solid $orange;
+    overflow: hidden;
+    position: relative;
+    padding: 30px 3px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+
+    &:nth-child(2) {
+      border: 12px solid $red;
+    }
+  }
+
+  .post_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .article_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .article_title {
+    position: relative;
+    z-index: 3;
+    color: $white;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 120%;
+    letter-spacing: 0.6px;
+  }
+}
+
+.about {
+  position: relative;
+  @include adaptive-value('padding-top', 65, 5, 1);
+  @include adaptive-value('padding-bottom', 65, 5, 1);
+  @include adaptive-value('padding-right', 65, 5, 1);
+  @include adaptive-value('padding-left', 65, 5, 1);
+
+  .about_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptive-value('gap', 65, 30, 1);
+    background-color: $black;
+    @include adaptive-value('padding-top', 65, 15, 1);
+    @include adaptive-value('padding-bottom', 65, 15, 1);
+    @include adaptive-value('padding-right', 65, 15, 1);
+    @include adaptive-value('padding-left', 65, 15, 1);
+    border-radius: 67px;
+
+    @include media('<desktop') {
+      flex-direction: column;
+    }
+  }
+
+  .about_img {
+    width: 45%;
+
+    @include media('<desktop') {
+      width: 70%;
+    }
+
+    @include media('<phone') {
+      width: 100%;
+    }
+  }
+
+  .about_text {
+    width: 49%;
+    color: $white;
+    @include adaptive-value('font-size', 20, 16, 1);
+    font-weight: 800;
+    line-height: 120%;
+    letter-spacing: 0.6px;
+
+    @include media('<desktop') {
+      width: 100%;
+    }
+  }
+}
+
+.contact {
+  background-color: $black;
+  @include adaptive-value('padding-top', 65, 35, 1);
+  @include adaptive-value('padding-bottom', 65, 35, 1);
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include media('<tablet') {
+      flex-direction: column;
+    }
+  }
+
+  .title {
+    color: $orange;
+    @include adaptive-value('font-size', 128, 48, 1);
+    font-weight: 800;
+    letter-spacing: 3.84px;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    text-transform: uppercase;
+
+    @include media('<tablet') {
+      transform: rotate(0deg);
+      writing-mode: horizontal-tb;
+    }
+  }
+
+  form {
+    background-color: $white;
+    border-radius: 56px;
+    @include adaptive-value('padding-top', 35, 30, 1);
+    @include adaptive-value('padding-bottom', 35, 30, 1);
+    @include adaptive-value('padding-right', 35, 15, 1);
+    @include adaptive-value('padding-left', 35, 15, 1);
+    width: 45%;
+    text-align: center;
+
+    @include media('<tablet') {
+      width: 100%;
+      border-radius: 32px;
+    }
+  }
+
+  .input_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .label_name {
+    color: $orange;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 800;
+    letter-spacing: 0.72px;
+  }
+
+  .input_data,
+  .input_area {
+    border-radius: 18px;
+    border: 3px solid $black;
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .input_data {
+    @include adaptive-value('height', 70, 35, 1);
+  }
+
+  .input_area {
+    @include adaptive-value('height', 230, 150, 1);
+  }
+
+  .form_btn {
+    border-radius: 4px;
+    background: $orange;
+    padding: 8px 16px;
+    color: $white;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 800;
+    letter-spacing: 0.72px;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  .contact_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include adaptive-value('gap', 96, 45, 1);
+
+    @include media('<tablet') {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .info_title {
+    color: $orange;
+    @include adaptive-value('font-size', 48, 36, 1);
+    font-weight: 800;
+    letter-spacing: 1.44px;
+    margin-bottom: 30px;
+  }
+
+  .link {
+    color: $white;
+    @include adaptive-value('font-size', 32, 24, 1);
+    font-weight: 800;
+    letter-spacing: 0.96px;
+  }
+
+  .icon {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.post {
+  background-color: $black;
+  @include adaptive-value('padding-top', 65, 35, 1);
+  @include adaptive-value('padding-bottom', 65, 35, 1);
+
+  .title {
+    color: $white;
+    @include adaptive-value('font-size', 48, 36, 1);
+    font-weight: 600;
+    letter-spacing: 1.44px;
+    @include adaptive-value('margin-bottom', 65, 35, 1);
+  }
+
+  .content {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .post_img {
+    width: 100%;
+    @include adaptive-value('height', 450, 350, 1);
+    border-radius: 47px;
+    border: 12px solid $orange;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .post_text {
+    background-color: $white;
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    @include adaptive-value('padding-top', 30, 15, 1);
+    @include adaptive-value('padding-bottom', 30, 15, 1);
+    @include adaptive-value('padding-right', 30, 15, 1);
+    @include adaptive-value('padding-left', 30, 15, 1);
+  }
+
+  .text {
+    color: $black;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 0.72px;
+  }
+}
