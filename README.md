@@ -8,4 +8,4 @@
 
 5.Scootastic: https://boskolife.github.io/Scooters/Scootastic/dist/index.html
 
-5.Scootastic: https://boskolife.github.io/Scooters/WheelWiz/dist/index.html
+6.WheelWiz: https://boskolife.github.io/Scooters/WheelWiz/dist/index.html
