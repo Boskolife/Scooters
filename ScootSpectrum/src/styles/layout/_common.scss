@@ -1,0 +1,228 @@
+// body {
+//   background: url(../image/bg.png);
+//   background-position: 0 0;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+.container {
+  max-width: 1045px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  background-color: $yellow;
+  @include adaptive-value('padding-top', 80, 40, 1);
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+  position: relative;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tip {
+    border: 1px solid $black;
+    padding: 8px 16px;
+    color: $black;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  .title {
+    color: $black;
+    @include adaptive-value('font-size', 48, 36, 1);
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+
+  .main_text {
+    color: $black;
+    @include adaptive-value('font-size', 24, 16, 1);
+    margin-bottom: 15px;
+  }
+
+  .facebook {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include adaptive-value('right', 65, 15, 1);
+    width: 32px;
+    height: 32px;
+
+    @include media('<tablet') {
+      position: static;
+      display: inline-block;
+      transform: translateY(0);
+    }
+
+    svg {
+      fill: $black;
+    }
+  }
+}
+
+.title {
+  color: $black;
+  @include adaptive-value('font-size', 48, 36, 1);
+  font-weight: 400;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.text {
+  color: $gray;
+  text-align: justify;
+  @include adaptive-value('font-size', 20, 16, 1);
+  line-height: 120%;
+}
+
+.blogs {
+  @include adaptive-value('padding-top', 65, 30, 1);
+  @include adaptive-value('padding-bottom', 65, 30, 1);
+
+  .blogs_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .blog_title {
+    color: $black;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 600;
+    margin-bottom: 15px;
+
+    .letter {
+      @include adaptive-value('font-size', 72, 36, 1);
+      font-weight: 400;
+      font-family: 'Times New Roman';
+    }
+  }
+
+  .blog_btn {
+    color: $white;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    padding: 8px;
+    width: 145px;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(255, 255, 255, 0.25) 100%
+      ),
+      linear-gradient(180deg, #cd4df4 0%, #895df4 48.97%, #5369f3 100%);
+  }
+}
+
+.scoot_img {
+  width: 100%;
+  height: 330px;
+}
+
+.about {
+  @include adaptive-value('padding-top', 65, 30, 1);
+  @include adaptive-value('padding-bottom', 65, 30, 1);
+
+  .about_text {
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+  }
+
+  .about_img {
+    border-radius: 0px 32px;
+    background: #f2f2f2;
+    box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.25);
+    @include adaptive-value('padding-top', 30, 15, 1);
+    @include adaptive-value('padding-bottom', 30, 15, 1);
+    @include adaptive-value('padding-right', 30, 15, 1);
+    @include adaptive-value('padding-left', 30, 15, 1);
+  }
+}
+
+.contact {
+  @include adaptive-value('padding-top', 180, 50, 1);
+  @include adaptive-value('padding-bottom', 180, 50, 1);
+  background-color: $red;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include adaptive-value('gap', 65, 30, 1);
+
+    @include media('<550px') {
+      flex-direction: column;
+    }
+  }
+
+  .contact_title {
+    color: $white;
+    font-weight: 600;
+  }
+
+  .line {
+    width: 1px;
+    height: 204px;
+    background-color: $white;
+
+    @include media('<550px') {
+      display: none;
+    }
+  }
+
+  .link_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+
+    @include media('<550px') {
+      align-items: center;
+    }
+  }
+
+  .link {
+    color: $white;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 600;
+  }
+}
+
+.main_similar {
+  .tip {
+    border: 1px solid $white;
+    color: $white;
+  }
+
+  .title,
+  .main_text {
+    color: $white;
+  }
+
+  .facebook {
+    svg {
+      fill: $white;
+    }
+  }
+}
+
+.main_blogs {
+  background-color: $blue;
+}
+
+.main_about {
+  background-color: $red;
+}
+
+.main_contact {
+  background-color: $green;
+}

@@ -1,0 +1,40 @@
+#footer {
+  background-color: $black;
+  @include adaptive-value('padding-top', 180, 50, 1);
+  @include adaptive-value('padding-bottom', 180, 50, 1);
+
+  .container {
+    max-width: 1366px;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptive-value('gap', 65, 20, 1);
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+  .line {
+    max-width: 640px;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .menu_link {
+    color: $white;
+    font-family: 'FONTSPRING DEMO - Proxima Nova Semibold';
+    @include adaptive-value('font-size', 20, 16, 1);
+    font-weight: 600;
+    font-family: 'Proximanova';
+  }
+}
