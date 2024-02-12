@@ -1,0 +1,61 @@
+#header {
+  @include adaptive-value('padding-top', 85, 25, 1);
+//   max-width: 900px;
+  width: 100%;
+  margin: 0 0 0 auto;
+  @include adaptive-value('padding-right', 45, 15, 1);
+
+  .content {
+    border-bottom: 8px solid $black;
+    @include adaptive-value('padding-bottom', 55, 25, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    width: max-content;
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+  }
+
+  .menu_link {
+    color: $black;
+    font-size: 48px;
+    @include adaptive-value('font-size', 48, 22, 1);
+    text-transform: uppercase;
+  }
+
+  form {
+    border-radius: 9px;
+    border: 3px solid $black;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 330px;
+  }
+
+  .search {
+    border: none;
+    background-color: transparent;
+    color: $black;
+    font-size: 48px;
+    width: 90%;
+
+    &::placeholder {
+      color: $black;
+      font-size: 48px;
+      @include adaptive-value('font-size', 48, 22, 1);
+      text-transform: uppercase;
+    }
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+}

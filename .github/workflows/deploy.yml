@@ -81,6 +81,14 @@ jobs:
           npm run build
           rm -rf node_modules
 
+      # TwistNThrive:
+      - name: Build TwistNThrive
+        working-directory: ./TwistNThrive
+        run: |
+          npm install
+          npm run build
+          rm -rf node_modules
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

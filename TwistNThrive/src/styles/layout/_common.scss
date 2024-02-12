@@ -1,0 +1,121 @@
+.container {
+  max-width: 1270px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  width: 70%;
+  @include adaptive-value('padding-top', 120, 50, 1);
+  @include adaptive-value('padding-right', 65, 15, 1);
+  margin: 0 0 0 auto;
+
+  .main_logo {
+    position: absolute;
+    top: 0;
+    @include adaptive-value('left', 65, 15, 1);
+    max-width: 255px;
+  }
+
+  .main_title {
+    color: $black;
+    font-family: 'Tw Cen MT Condensed';
+    @include adaptive-value('font-size', 128, 36, 1);
+    font-weight: 400;
+    letter-spacing: -2.56px;
+    @include adaptive-value('margin-bottom', 45, 30, 1);
+  }
+
+  .sub_title {
+    color: #000;
+    font-family: 'Special Agent Condensed';
+    @include adaptive-value('font-size', 48, 38, 1);
+    line-height: 90%;
+    letter-spacing: 1.44px;
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+    max-width: 565px;
+    width: 100%;
+  }
+
+  .text {
+    color: $black;
+    font-family: 'Century Gothic';
+    @include adaptive-value('font-size', 20, 16, 1);
+    line-height: 180%;
+    letter-spacing: 0.6px;
+  }
+}
+
+.main_img {
+  width: 100%;
+  @include adaptive-value('height', 855, 300, 1);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.blogs {
+  @include adaptive-value('padding-top', 130, 60, 1);
+  @include adaptive-value('padding-bottom', 130, 60, 1);
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .text_content {
+    width: 47%;
+  }
+
+  .title {
+    color: #000;
+    font-family: 'Special Agent';
+    @include adaptive-value('font-size', 128, 36, 1);
+    font-weight: 400;
+    letter-spacing: 3.84px;
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include adaptive-value('padding-bottom', 50, 25, 1);
+    @include adaptive-value('margin-bottom', 50, 25, 1);
+    border-bottom: 4px solid $black;
+  }
+
+  .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 78px;
+    min-height: 78px;
+    gap: 8px;
+    border-radius: 50%;
+    border: 6px solid $black;
+    color: $black;
+    font-family: 'Special Agent';
+    @include adaptive-value('font-size', 56, 40, 1);
+    letter-spacing: 1.68px;
+  }
+
+  .blogs_img {
+    width: 45%;
+  }
+
+  .post_title {
+    color: $black;
+    font-family: 'Special Agent';
+    @include adaptive-value('font-size', 36, 24, 1);
+    font-weight: 400;
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+  }
+}
