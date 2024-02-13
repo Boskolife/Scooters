@@ -1,0 +1,48 @@
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  @include adaptive-value('padding-top', 40, 20, 1);
+  @include adaptive-value('padding-bottom', 40, 20, 1);
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include media('<tablet'){
+      flex-direction: column;
+    }
+  }
+
+  .logo {
+    max-width: 180px;
+    width: 100%;
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .menu_link {
+    color: $white;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .orange_bg {
+    border-radius: 128px;
+    background-color: $orange;
+    padding: 8px 16px;
+
+    @include media('<tablet'){
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+}
