@@ -113,6 +113,14 @@ jobs:
           npm run build
           rm -rf node_modules
 
+      # RidePusle:
+      - name: Build RidePusle
+        working-directory: ./RidePusle
+        run: |
+          npm install
+          npm run build
+          rm -rf node_modules
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

@@ -1,0 +1,39 @@
+#header {
+  background-color: $green;
+  @include adaptive-value('padding-top', 30, 15, 1);
+  @include adaptive-value('padding-bottom', 30, 15, 1);
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include media('<tablet'){
+        flex-direction: column;
+    }
+  }
+
+  .logo {
+    max-width: 105px;
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include media('<phone'){
+        gap: 25px;
+    }
+  }
+
+  .menu_link {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .social {
+    max-width: 125px;
+  }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ride Pusle</title>
+    <link rel="stylesheet" href="/styles/main.scss" />
+    <link rel="website icon" href="./image/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:regular,600"
+      rel="stylesheet"
+    />
+    <script type="module" src="/js/main.ts" defer></script>
+  </head>
+
+  <body>
+    {{> header }}
+    <main>
+      <section class="contact contact_page">
+        <div class="container">
+          <div class="content">
+            <h2 class="contact_title">Contact Us</h2>
+            <p class="contact_text">
+              Lorem ipsum dolor sit amet consectetur. Vestibulum mattis potenti
+              urna proin. Feugiat commodo ipsum placerat id et amet pharetra
+              diam turpis.
+            </p>
+            <form>
+              <input class="data_input" placeholder="Name" type="text" />
+              <input class="data_input" placeholder="Email" type="email" />
+              <input class="data_input" placeholder="Phone" type="tel" />
+              <button class="form_btn">
+                Explore
+                <img class="arrow" src="./image/white_arrow.svg" alt="arrow" />
+              </button>
+            </form>
+            <p class="contact_text">
+                Lorem ipsum dolor sit amet consectetur. Vestibulum mattis potenti
+                urna proin. Feugiat commodo ipsum placerat id et amet pharetra
+                diam turpis.
+              </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer }}
+  </body>
+</html>
