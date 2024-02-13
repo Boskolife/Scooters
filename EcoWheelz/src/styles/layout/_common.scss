@@ -26,7 +26,27 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.38) 48.62%,
+        rgba(0, 0, 0, 0.75) 100%
+      );
+    }
   }
 
   .content {
@@ -416,7 +436,7 @@ body {
     justify-content: space-between;
     gap: 30px;
 
-    @include media('<desktop'){
+    @include media('<desktop') {
       flex-direction: column;
     }
   }
@@ -424,7 +444,7 @@ body {
   .article_content {
     width: 64%;
 
-    @include media('<desktop'){
+    @include media('<desktop') {
       width: 100%;
     }
   }
@@ -437,7 +457,7 @@ body {
 
   .article_title {
     color: $black;
-    @include adaptive-value("font-size", 48, 32, 1);
+    @include adaptive-value('font-size', 48, 32, 1);
     font-weight: 800;
     line-height: 125%;
     margin-bottom: 30px;
@@ -445,7 +465,7 @@ body {
 
   .article_text {
     color: $gray;
-    @include adaptive-value("font-size", 24, 18, 1);
+    @include adaptive-value('font-size', 24, 18, 1);
     font-weight: 600;
     line-height: 115%;
     margin-bottom: 30px;
@@ -477,14 +497,14 @@ body {
 
   .subtitle {
     color: $gray;
-    @include adaptive-value("font-size", 36, 22, 1);
+    @include adaptive-value('font-size', 36, 22, 1);
     font-weight: 600;
     line-height: 122%;
     margin-bottom: 30px;
   }
 
   .article_img {
-    @include adaptive-value("height", 445, 230, 1);
+    @include adaptive-value('height', 445, 230, 1);
     width: 100%;
     margin-bottom: 30px;
 
@@ -497,7 +517,7 @@ body {
 
   .text_content {
     color: $gray;
-    @include adaptive-value("font-size", 20, 16, 1);
+    @include adaptive-value('font-size', 20, 16, 1);
     line-height: 120%;
     margin-bottom: 30px;
   }
@@ -509,14 +529,14 @@ body {
   .article_links {
     width: 33%;
 
-    @include media('<desktop'){
+    @include media('<desktop') {
       width: 100%;
     }
   }
 
   .article_links_title {
     color: $black;
-    @include adaptive-value("font-size", 36, 30, 1);
+    @include adaptive-value('font-size', 36, 30, 1);
     font-weight: 600;
     line-height: 122%;
     margin-bottom: 30px;
@@ -541,7 +561,7 @@ body {
 
   .article_link {
     color: $black;
-    @include adaptive-value("font-size", 24, 20, 1);
+    @include adaptive-value('font-size', 24, 20, 1);
     font-weight: 400;
     line-height: 115%;
   }
@@ -554,14 +574,14 @@ body {
 
   .newsletter_title {
     color: $black;
-    @include adaptive-value("font-size", 24, 20, 1);
+    @include adaptive-value('font-size', 24, 20, 1);
     font-weight: 600;
     margin-bottom: 10px;
   }
 
   .newsletter_text {
     color: $gray;
-    @include adaptive-value("font-size", 20, 16, 1);
+    @include adaptive-value('font-size', 20, 16, 1);
     line-height: 120%;
     margin-bottom: 30px;
   }
@@ -581,11 +601,11 @@ body {
 
     &::placeholder {
       color: #acacac;
-      @include adaptive-value("font-size", 18, 16, 1);
+      @include adaptive-value('font-size', 18, 16, 1);
       font-weight: 600;
     }
 
-    &:focus{
+    &:focus {
       border: 1px solid $black;
     }
   }
@@ -593,19 +613,19 @@ body {
   .form_btn {
     color: $white;
     text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
-    @include adaptive-value("font-size", 20, 16, 1);
+    @include adaptive-value('font-size', 20, 16, 1);
     font-weight: 600;
     width: 100%;
     border-radius: 8px;
     background-color: $black;
     padding: 15px;
     border: 1px solid $black;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
 
-    &:hover{
+    &:hover {
       background-color: $white;
       color: $black;
-      transition: all .3s ease 0s;
+      transition: all 0.3s ease 0s;
     }
   }
 }

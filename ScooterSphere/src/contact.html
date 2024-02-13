@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scooter Sphere</title>
+    <link rel="stylesheet" href="./styles/main.scss" />
+    <link rel="website icon" href="./image/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:regular"
+      rel="stylesheet"
+    />
+    <script type="module" src="./js/main.ts" defer></script>
+  </head>
+
+  <body>
+    {{> header_yellow }}
+    <main>
+      <section class="contact">
+        <img class="contact_icon_1" src="./image/contact_icon_1.webp" alt="icon" />
+        <img class="contact_icon_2" src="./image/contact_icon_2.webp" alt="icon" />
+        <img class="contact_icon_3" src="./image/contact_icon_3.webp" alt="icon" />
+        <div class="container">
+          <div class="content">
+            <h1 class="title">Contact Us</h1>
+            <form>
+              <div class="input_wrap">
+                <label class="label_name">Name</label>
+                <input class="input_data" type="text" />
+              </div>
+              <div class="input_wrap">
+                <label class="label_name">Email</label>
+                <input class="input_data" type="email" />
+              </div>
+              <div class="input_wrap">
+                <label class="label_name">Message</label>
+                <textarea class="input_area"></textarea>
+              </div>
+              <button class="form_btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer }}
+  </body>
+</html>

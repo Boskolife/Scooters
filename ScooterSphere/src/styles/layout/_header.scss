@@ -1,0 +1,51 @@
+.header {
+  padding: 30px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .content {
+    display: flex;
+    align-items: center;
+
+    @include media('<tablet') {
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    max-width: 72px;
+    @include adaptive-value('margin-right', 255, 0, 1);
+
+    @include media('<tablet') {
+      margin: 0;
+    }
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    @include adaptive-value('gap', 215, 15, 1);
+  }
+
+  .menu_link {
+    color: $yellow;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $black;
+    @include adaptive-value('font-size', 20, 16, 1);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.header_yellow {
+  position: static;
+  background-color: $yellow;
+
+  .menu_link {
+    color: $black;
+    -webkit-text-stroke-width: 0;
+    -webkit-text-stroke-color: transparent;
+  }
+}

@@ -1,0 +1,64 @@
+#footer {
+  background-color: $blue;
+  @include adaptive-value('padding-top', 190, 70, 1);
+  @include adaptive-value('padding-bottom', 190, 70, 1);
+  position: relative;
+
+  .footer_icon_1 {
+    position: absolute;
+    left: 0;
+    top: 15%;
+    @include adaptive-value('width', 240, 50, 1);
+
+    @include media('<phone') {
+      top: 0;
+    }
+  }
+
+  .footer_icon_2 {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    @include adaptive-value('width', 315, 60, 1);
+
+    @include media('<phone'){
+        bottom: 30%;
+    }
+  }
+
+  .footer_icon_3 {
+    position: absolute;
+    bottom: 0%;
+    left: 15%;
+    @include adaptive-value('width', 345, 100, 1);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include adaptive-value('gap', 65, 30, 1);
+    position: relative;
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    @include adaptive-value('gap', 130, 20, 1);
+  }
+
+  .menu_link,
+  .rights {
+    color: $white;
+    font-family: 'Poppins';
+    @include adaptive-value('font-size', 24, 17, 1);
+  }
+
+  .facebook {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}

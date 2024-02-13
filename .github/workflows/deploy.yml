@@ -89,6 +89,14 @@ jobs:
           npm run build
           rm -rf node_modules
 
+      # ScooterSphere:
+      - name: Build ScooterSphere
+        working-directory: ./ScooterSphere
+        run: |
+          npm install
+          npm run build
+          rm -rf node_modules
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
