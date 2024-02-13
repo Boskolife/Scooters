@@ -19,3 +19,6 @@
 10.ScootSync: https://boskolife.github.io/Scooters/ScootSync/dist/index.html
 
 11.TwistNThrive: https://boskolife.github.io/Scooters/TwistNThrive/dist/index.html
+
+12.RidePusle: https://boskolife.github.io/Scooters/RidePusle/dist/index.html
+
