@@ -13,7 +13,7 @@ export default defineConfig({
   base:
     process.env.NODE_ENV === 'development'
     ? '/'
-    : '/Scooters/EcoWheelz/dist',
+    : '/Scooters/TwistNThrive/dist',
   root: 'src',
   publicDir: '../public',
   plugins: [
