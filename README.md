@@ -17,3 +17,5 @@
 9.RideRevolution: https://boskolife.github.io/Scooters/RideRevolution/dist/index.html
 
 10.ScootSync: https://boskolife.github.io/Scooters/ScootSync/dist/index.html
+
+11.TwistNThrive: https://boskolife.github.io/Scooters/TwistNThrive/dist/index.html
