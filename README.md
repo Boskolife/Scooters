@@ -11,3 +11,5 @@
 6.WheelWiz: https://boskolife.github.io/Scooters/WheelWiz/dist/index.html
 
 7.ScootSpectrum: https://boskolife.github.io/Scooters/ScootSpectrum/dist/index.html
+
+8.ScooterSphere: https://boskolife.github.io/Scooters/ScooterSphere/dist/index.html
