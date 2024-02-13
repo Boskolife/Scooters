@@ -1,0 +1,40 @@
+#header {
+  @include adaptive-value('padding-top', 50, 15, 1);
+  @include adaptive-value('padding-bottom', 50, 15, 1);
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include media('<tablet') {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .menu_list {
+    display: flex;
+    align-items: center;
+    @include adaptive-value('gap', 180, 20, 1);
+  }
+
+  .menu_link {
+    color: $black;
+    font-family: 'Integral CF';
+    @include adaptive-value('font-size', 24, 20, 1);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .social_links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .link {
+    width: 32px;
+    height: 32px;
+  }
+}
