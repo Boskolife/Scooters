@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1270px;
   width: 100%;
@@ -6,21 +10,34 @@
 }
 
 .main {
-  width: 70%;
+  width: 65%;
+  padding: 0 15px;
   @include adaptive-value('padding-top', 120, 50, 1);
   @include adaptive-value('padding-right', 65, 15, 1);
   margin: 0 0 0 auto;
+
+  @include media('<desktop') {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
 
   .main_logo {
     position: absolute;
     top: 0;
     @include adaptive-value('left', 65, 15, 1);
     max-width: 255px;
+
+    @include media('<desktop') {
+      display: none;
+    }
   }
 
   .main_title {
     color: $black;
     font-family: 'Tw Cen MT Condensed';
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
     @include adaptive-value('font-size', 128, 36, 1);
     font-weight: 400;
     letter-spacing: -2.56px;
@@ -36,6 +53,12 @@
     @include adaptive-value('margin-bottom', 65, 30, 1);
     max-width: 565px;
     width: 100%;
+    font-weight: 400;
+
+    @include media('<desktop') {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
   }
 
   .text {
@@ -67,10 +90,18 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+
+    @include media('<desktop') {
+      flex-direction: column;
+    }
   }
 
   .text_content {
-    width: 47%;
+    width: 53%;
+
+    @include media('<desktop') {
+      width: 100%;
+    }
   }
 
   .title {
@@ -102,20 +133,167 @@
     border: 6px solid $black;
     color: $black;
     font-family: 'Special Agent';
-    @include adaptive-value('font-size', 56, 40, 1);
+    @include adaptive-value('font-size', 56, 30, 1);
     letter-spacing: 1.68px;
+
+    @include media('<tablet') {
+      min-width: 48px;
+      min-height: 48px;
+    }
   }
 
   .blogs_img {
-    width: 45%;
+    max-width: 560px;
   }
 
   .post_title {
     color: $black;
     font-family: 'Special Agent';
-    @include adaptive-value('font-size', 36, 24, 1);
+    @include adaptive-value('font-size', 36, 20, 1);
     font-weight: 400;
     letter-spacing: 1.08px;
     text-transform: uppercase;
+  }
+}
+
+.contact {
+  @include adaptive-value('padding-top', 65, 30, 1);
+
+  .content {
+    display: flex;
+    align-items: flex-end;
+    gap: 85px;
+  }
+
+  .contact_img {
+    max-width: 480px;
+
+    @include media('<desktop') {
+      display: none;
+    }
+  }
+
+  .title {
+    color: $black;
+    font-family: 'Special Agent';
+    @include adaptive-value('font-size', 128, 56, 1);
+    font-weight: 400;
+    letter-spacing: 3.84px;
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+  }
+
+  .for_wrap {
+    min-width: 57%;
+    text-align: center;
+    margin-right: 15px;
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+
+    @include media('<desktop') {
+      min-width: calc(100% - 30px);
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  form {
+    background-color: $black;
+    @include adaptive-value('padding-top', 65, 15, 1);
+    @include adaptive-value('padding-bottom', 65, 15, 1);
+    @include adaptive-value('padding-right', 65, 15, 1);
+    @include adaptive-value('padding-left', 65, 15, 1);
+    width: 100%;
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+  }
+
+  .input_wrap {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input_data,
+  .area_data {
+    background-color: $white;
+    padding: 10px;
+    height: 55px;
+    width: 100%;
+    color: $black;
+    font-family: 'Special Agent';
+    @include adaptive-value('font-size', 36, 24, 1);
+  }
+
+  .area_data {
+    @include adaptive-value('height', 270, 150, 1);
+  }
+
+  .label_name {
+    color: $white;
+    font-family: 'Special Agent';
+    @include adaptive-value('font-size', 36, 24, 1);
+    letter-spacing: 1.08px;
+  }
+
+  .form_btn {
+    width: 168px;
+    padding: 8px;
+    gap: 8px;
+    color: $black;
+    font-family: 'Special Agent';
+    @include adaptive-value('font-size', 36, 24, 1);
+    letter-spacing: 1.08px;
+    border: none;
+  }
+
+  .facebook {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.post {
+  @include adaptive-value('padding-top', 65, 35, 1);
+  @include adaptive-value('padding-bottom', 65, 35, 1);
+
+  .content {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .post_img {
+    width: 100%;
+    @include adaptive-value('height', 565, 350, 1);
+    border-radius: 32px;
+    overflow: hidden;
+    border: 21px solid $black;
+    @include adaptive-value('margin-bottom', 65, 35, 1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .post_title {
+    color: $black;
+    text-align: center;
+    font-family: 'Special Agent';
+    @include adaptive-value('font-size', 76, 28, 1);
+    font-weight: 400;
+    letter-spacing: 2.28px;
+    @include adaptive-value('margin-bottom', 65, 35, 1);
+  }
+
+  p {
+    color: #555;
+    text-align: justify;
+    font-family: 'Century Gothic';
+    @include adaptive-value('font-size', 24, 18, 1);
+    line-height: 100%;
+    @include adaptive-value('margin-bottom', 65, 35, 1);
   }
 }

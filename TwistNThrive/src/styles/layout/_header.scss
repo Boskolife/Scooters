@@ -1,31 +1,55 @@
-#header {
+.header {
   @include adaptive-value('padding-top', 85, 25, 1);
-//   max-width: 900px;
-  width: 100%;
+  width: 65%;
   margin: 0 0 0 auto;
-  @include adaptive-value('padding-right', 45, 15, 1);
+  @include adaptive-value('margin-right', 45, 15, 1);
+
+  @include media('<desktop') {
+    width: 100%;
+    margin: 0;
+  }
 
   .content {
     border-bottom: 8px solid $black;
-    @include adaptive-value('padding-bottom', 55, 25, 1);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 45px;
-    width: max-content;
+    padding: 0 45px;
+    @include adaptive-value('padding-bottom', 55, 25, 1);
+
+    @include media('<desktop') {
+      width: 100%;
+    }
+
+    @include media('<tablet') {
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 15px 20px 15px;
+    }
+  }
+
+  .logo {
+    display: none;
+
+    @include media('<desktop') {
+      display: block;
+    }
   }
 
   .menu_list {
     display: flex;
     align-items: center;
     gap: 45px;
+    @include adaptive-value('gap', 45, 20, 1);
   }
 
   .menu_link {
     color: $black;
     font-size: 48px;
-    @include adaptive-value('font-size', 48, 22, 1);
+    @include adaptive-value('font-size', 48, 32, 1);
     text-transform: uppercase;
+    font-family: 'Special Agent';
   }
 
   form {
@@ -42,8 +66,9 @@
     border: none;
     background-color: transparent;
     color: $black;
-    font-size: 48px;
+    @include adaptive-value('font-size', 48, 22, 1);
     width: 90%;
+    font-family: 'Special Agent';
 
     &::placeholder {
       color: $black;
@@ -57,5 +82,16 @@
     width: 32px;
     height: 32px;
     flex-shrink: 0;
+  }
+}
+
+.header_post {
+  width: 100%;
+
+  .content {
+    border-bottom: none;
+  }
+  .logo {
+    display: block;
   }
 }

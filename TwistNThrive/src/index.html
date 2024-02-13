@@ -13,34 +13,32 @@
   <body>
     {{> header }}
     <main>
-      <section class="main">
+      <section class="main" id="about">
         <a href="index.html" class="main_logo">
           <img src="./image/main_logo.webp" alt="logo" />
         </a>
-        <div class="container">
-          <div class="content">
-            <h1 class="main_title">TwistN’Thrive</h1>
-            <h2 class="sub_title">
-              Lorem ipsum dolor sit amet consectetur. Mauris natoque cursus
-            </h2>
-            <p class="text">
-              Lorem ipsum dolor sit amet consectetur. Accumsan fermentum elit mi
-              porta. Etiam et tellus proin sapien ornare mauris. Velit quam
-              tristique tortor sit turpis odio viverra. A orci quisque viverra
-              facilisis. Tincidunt rhoncus proin ante consectetur convallis
-              ultrices mauris laoreet. Diam pellentesque non accumsan eu ipsum.
-              A diam a lacus amet turpis aliquam. Mi mattis commodo vulputate
-              viverra vel. Tincidunt purus felis ac erat. Aliquam ac eget sed
-              non in eget a in metus. Enim id sed odio eu tortor nec eget quis.
-              Elementum elementum non nunc sit sed massa tristique.
-            </p>
-          </div>
+        <div class="content">
+          <h1 class="main_title">TwistN’Thrive</h1>
+          <h2 class="sub_title">
+            Lorem ipsum dolor sit amet consectetur. Mauris natoque cursus
+          </h2>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur. Accumsan fermentum elit mi
+            porta. Etiam et tellus proin sapien ornare mauris. Velit quam
+            tristique tortor sit turpis odio viverra. A orci quisque viverra
+            facilisis. Tincidunt rhoncus proin ante consectetur convallis
+            ultrices mauris laoreet. Diam pellentesque non accumsan eu ipsum. A
+            diam a lacus amet turpis aliquam. Mi mattis commodo vulputate
+            viverra vel. Tincidunt purus felis ac erat. Aliquam ac eget sed non
+            in eget a in metus. Enim id sed odio eu tortor nec eget quis.
+            Elementum elementum non nunc sit sed massa tristique.
+          </p>
         </div>
       </section>
       <section class="main_img">
         <img src="./image/main_img.webp" alt="image not found" />
       </section>
-      <section class="blogs">
+      <section class="blogs" id="blog">
         <div class="container">
           <div class="content">
             <div class="text_content">
@@ -77,8 +75,36 @@
               </div>
             </div>
             <div class="blogs_img">
-              <img src="./image/blog_img.webp" alt="blogg image">
+              <img src="./image/blog_img.webp" alt="blogg image" />
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="content">
+          <div class="contact_img">
+            <img src="./image/phone.webp" alt="phone" />
+          </div>
+          <div class="for_wrap">
+            <h2 class="title">CONTACT US</h2>
+            <form>
+              <div class="input_wrap">
+                <input class="input_data" type="text">
+                <label class="label_name">Name</label>
+              </div>
+              <div class="input_wrap">
+                <input class="input_data" type="text">
+                <label class="label_name">Email</label>
+              </div>
+              <div class="input_wrap">
+                <textarea class="area_data"></textarea>
+                <label class="label_name">Message</label>
+              </div>
+              <button class="form_btn">Submit</button>
+            </form>
+            <a href="#" class="facebook">
+              <img src="./image/facebook.svg" alt="facebook">
+            </a>
           </div>
         </div>
       </section>
