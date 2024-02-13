@@ -13,3 +13,5 @@
 7.ScootSpectrum: https://boskolife.github.io/Scooters/ScootSpectrum/dist/index.html
 
 8.ScooterSphere: https://boskolife.github.io/Scooters/ScooterSphere/dist/index.html
+
+9.RideRevolution: https://boskolife.github.io/Scooters/RideRevolution/dist/index.html
