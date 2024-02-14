@@ -110,11 +110,12 @@ html {
 
   .popUp_content {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
+    flex-direction: column;
     gap: 15px;
     background-color: $yellow;
-    padding-top: 50px;
+    @include adaptive-value('padding-top', 30, 15, 1);
     @include adaptive-value('padding-bottom', 30, 15, 1);
     @include adaptive-value('padding-right', 30, 15, 1);
     @include adaptive-value('padding-left', 30, 15, 1);
@@ -131,6 +132,12 @@ html {
     @include media('<tablet') {
       flex-direction: column;
     }
+  }
+
+  .content_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .popUp_active {
@@ -163,30 +170,10 @@ html {
   }
 
   .close_element {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 15px;
-    right: 15px;
-
-    &::after,
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 2px;
-      background-color: $black;
-    }
-
-    &::after {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    &::before {
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
+    text-align: end;
+    cursor: pointer;
+    @include adaptive-value('width', 40, 20, 1);
+    @include adaptive-value('height', 40, 20, 1);
   }
 
   .popUp_title {

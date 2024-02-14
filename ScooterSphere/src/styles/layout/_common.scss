@@ -12,6 +12,17 @@ html {
 .main {
   @include adaptive-value('height', 775, 450, 1);
   padding-bottom: 30px;
+  position: relative;
+
+  .main_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
 
   .container {
     height: 100%;
@@ -34,6 +45,7 @@ html {
     font-style: italic;
     font-weight: 700;
     text-transform: uppercase;
+    font-family: 'Century Schoolbook';
   }
 }
 
@@ -42,7 +54,6 @@ html {
   @include adaptive-value('padding-top', 65, 30, 1);
   @include adaptive-value('padding-bottom', 65, 30, 1);
   position: relative;
-  height: 500px;
 
   .blog_icon_1 {
     position: absolute;
@@ -63,12 +74,45 @@ html {
     bottom: 0;
     @include adaptive-value('width', 340, 270, 1);
   }
+
+  .items_wrap {
+    column-count: 3;
+    position: relative;
+    gap: 10px;
+
+    @include media('<tablet') {
+      column-count: 2;
+    }
+
+    @include media('<phone') {
+      column-count: 1;
+    }
+  }
+
+  .item {
+    display: inline-block;
+    margin-bottom: 10px;
+    height: 100%;
+    background: #fff;
+
+    img {
+      border-radius: 34px;
+      border: 8px solid #000;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .blog_logo {
+    width: 100%;
+  }
 }
 
 .about {
   @include adaptive-value('padding-top', 220, 60, 1);
   @include adaptive-value('padding-bottom', 220, 60, 1);
-  background-color: $black;
+  background-color: #000;
   position: relative;
 
   &::before,
@@ -331,30 +375,31 @@ html {
   }
 
   .post_card {
-    height: 320px;
-    border: 6px solid #000;
-    border-radius: 32px;
-    overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 15px;
   }
 
   .card_img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    border-radius: 30px;
+    border: 9px solid #000;
+    overflow: hidden;
+    height: 320px;
     object-fit: cover;
+    background-color: $white;
+    margin-bottom: 10px;
   }
 
   .card_title {
     color: $yellow;
-    position: relative;
+    color: #ffed02;
     text-align: center;
+    font-family: 'Century Schoolbook';
+    font-size: 16px;
+    font-weight: 700;
   }
 
   .related_btn {
@@ -363,6 +408,6 @@ html {
     text-align: end;
     color: $yellow;
     font-family: 'Century Gothic';
-    @include adaptive-value("font-size", 36, 24, 1);
+    @include adaptive-value('font-size', 36, 24, 1);
   }
 }

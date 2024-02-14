@@ -9,8 +9,8 @@
     justify-content: space-between;
     gap: 30px;
 
-    @include media('<tablet'){
-        flex-direction: column;
+    @include media('<tablet') {
+      flex-direction: column;
     }
   }
 
@@ -23,17 +23,13 @@
     align-items: center;
     gap: 30px;
 
-    @include media('<phone'){
-        gap: 25px;
+    @include media('<phone') {
+      gap: 25px;
     }
   }
 
   .menu_link {
     color: #fff;
     font-size: 16px;
-  }
-
-  .social {
-    max-width: 125px;
   }
 }

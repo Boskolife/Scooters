@@ -1,5 +1,10 @@
 .footer {
-  background: $yellow;
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.16) 0%,
+      rgba(255, 255, 255, 0.03) 100%
+    ),
+    #161616;
   @include adaptive-value('padding-top', 65, 30, 1);
   @include adaptive-value('padding-bottom', 65, 30, 1);
 
@@ -12,7 +17,7 @@
     justify-content: space-between;
     gap: 30px;
 
-    @include media('<desktop') {
+    @include media('<phone') {
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -22,113 +27,33 @@
   .column {
     display: flex;
     flex-direction: column;
-  }
 
-  .column_1 {
-    border-right: 1px solid $black;
-
-    @include media('<desktop') {
-      border: none;
+    @include media('<phone'){
+      align-items: center;
     }
   }
 
   .logo {
-    width: 335px;
+    max-width: 195px;
     width: 100%;
-    margin-bottom: 110px;
-    @include adaptive-value('width', 335, 245, 1);
-    @include adaptive-value('padding-right', 88, 0, 1);
-
-    @include media('<desktop') {
-      padding: 0;
-      margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
   }
 
   .copyright {
-    color: $black;
+    color: $yellow;
     @include adaptive-value('font-size', 20, 16, 1);
   }
 
-  .visible {
-    @include media('<desktop') {
-      display: none;
-    }
-  }
-
-  .hidden {
-    display: none;
-
-    @include media('<desktop') {
-      display: block;
-    }
-  }
-
-  .column_title {
-    font-weight: 400;
-  }
-
-  .link,
-  .column_title {
-    color: $black;
+  .link {
+    color: $yellow;
     @include adaptive-value('font-size', 20, 16, 1);
     margin-bottom: 25px;
     display: inline-block;
   }
 
-  .last {
-    margin: 0;
-  }
-
-  .column_4 {
-    max-width: 380px;
-  }
-
-  .contact_title {
-    color: $black;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 15px;
-  }
-
-  .text {
-    color: $black;
-    font-size: 16px;
-    margin-bottom: 15px;
-    line-height: 120%;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .mail_input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid $black;
-    margin-bottom: 15px;
-    padding: 20px 8px;
-
-    &::placeholder {
-      color: $black;
-      @include adaptive-value('font-size', 20, 16, 1);
-
-      @include media('<desktop') {
-        text-align: center;
-      }
-    }
-  }
-
-  .form_btn {
-    color: $yellow;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 15px;
-    background-color: $black;
-    border-radius: 4px;
-    border: none;
+  .facebook {
+    width: 24px;
+    height: 24px;
   }
 }
 

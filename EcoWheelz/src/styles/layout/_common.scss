@@ -339,6 +339,19 @@ body {
   }
 }
 
+.about_us {
+  .main_bg {
+    &::after {
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.38) 48.62%,
+        rgba(0, 0, 0, 0.75) 100%
+      );
+    }
+  }
+}
+
 .about_us_cards {
   .card_wrap {
     &:nth-child(2) {

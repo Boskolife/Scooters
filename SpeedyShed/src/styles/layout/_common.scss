@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.body_lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1330px;
   width: 100%;
@@ -200,6 +204,7 @@ html {
     @include adaptive-value('font-size', 24, 18, 1);
     font-weight: 600;
     margin-bottom: 15px;
+    cursor: pointer;
   }
 
   .article_text {
@@ -282,6 +287,88 @@ html {
     @include adaptive-value('font-size', 24, 20, 1);
     line-height: 115%;
     font-weight: 400;
+  }
+
+  .popUp_content {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 995px;
+    width: calc(100% - 20px);
+    border-radius: 16px;
+    background-color: $white;
+    height: auto;
+    @include adaptive-value('padding-top', 30, 15, 1);
+    @include adaptive-value('padding-bottom', 30, 15, 1);
+    @include adaptive-value('padding-right', 30, 15, 1);
+    @include adaptive-value('padding-left', 30, 15, 1);
+    z-index: 2;
+
+    .author {
+      @include adaptive-value('margin-bottom', 30, 15, 1);
+    }
+  }
+
+  .popUp_title_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    @include adaptive-value('margin-bottom', 30, 15, 1);
+  }
+
+  .poUp_title {
+    color: $black;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 800;
+  }
+
+  .close_element {
+    width: 41px;
+    height: 41px;
+    @include adaptive-value('width', 41, 25, 1);
+    @include adaptive-value('height', 41, 25, 1);
+    cursor: pointer;
+  }
+
+  .popUp_img {
+    width: 100%;
+    height: 340px;
+    @include adaptive-value('margin-bottom', 30, 15, 1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .popUp_text {
+    color: $black;
+    @include adaptive-value('font-size', 24, 18, 1);
+    line-height: 115%;
+  }
+
+  .popUp_active {
+    display: block;
+  }
+
+  .popUp_container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 1;
+  }
+
+  .activeContainer {
+    display: block;
   }
 }
 
@@ -650,40 +737,40 @@ html {
     justify-content: space-between;
     gap: 30px;
 
-    @include media('<desktop'){
+    @include media('<desktop') {
       flex-direction: column;
     }
 
-    &:nth-child(even){
+    &:nth-child(even) {
       flex-direction: row-reverse;
 
-      @include media('<desktop'){
+      @include media('<desktop') {
         flex-direction: column;
       }
     }
 
-    .board_title{
+    .board_title {
       margin-bottom: 30px;
     }
   }
 
-  .post_content{
+  .post_content {
     width: 54%;
 
-    @include media('<desktop'){
+    @include media('<desktop') {
       width: 100%;
     }
   }
 
-  .post_img{
+  .post_img {
     width: 41%;
     height: 100%;
 
-    @include media('<desktop'){
+    @include media('<desktop') {
       width: 100%;
     }
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
