@@ -1,0 +1,9 @@
+#footer {
+  @include adaptive-value('padding-bottom', 65, 30, 1);
+  text-align: center;
+
+  .logo{
+    max-width: 265px;
+    display: inline-block;
+  }
+}

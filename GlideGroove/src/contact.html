@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glide Groove</title>
+    <link rel="stylesheet" href="/styles/main.scss" />
+    <link rel="website icon" href="./image/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:regular,600,800"
+      rel="stylesheet"
+    />
+    <script type="module" src="/js/main.ts" defer></script>
+  </head>
+
+  <body>
+    {{> header }}
+    <main>
+      <section class="contact">
+        <div class="container">
+          <div class="content">
+            <div class="contact_img">
+              <img src="./image/contact.webp" alt="phone" />
+            </div>
+            <div class="contact_form">
+              <h2 class="form_title">Contact Us</h2>
+              <form>
+                <div class="input_wrap">
+                  <label class="label_name">Name</label>
+                  <input class="input_data" type="text" />
+                </div>
+                <div class="input_wrap">
+                  <label class="label_name">EMAIL ADDRESS:</label>
+                  <input class="input_data" type="text" />
+                </div>
+                <div class="input_wrap">
+                  <label class="label_name">Message</label>
+                  <textarea class="input_area"></textarea>
+                </div>
+                <button type="submit" class="form_btn">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> footer }}
+  </body>
+</html>

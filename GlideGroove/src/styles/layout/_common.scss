@@ -1,0 +1,286 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  @include adaptive-value('padding-top', 130, 50, 1);
+  @include adaptive-value('padding-bottom', 155, 70, 1);
+
+  .main_title {
+    color: $orange;
+    @include adaptive-value('font-size', 36, 24, 1);
+    font-weight: 600;
+    line-height: 120%;
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+    max-width: 945px;
+    width: 100%;
+  }
+
+  .text {
+    color: $black30;
+    font-size: 16px;
+    line-height: 125%;
+  }
+
+  .main_text {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 0 0 auto;
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+  }
+
+  .text_content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include media('<tablet') {
+      flex-direction: column;
+    }
+  }
+
+  .main_img {
+    width: 55%;
+
+    @include media('<tablet') {
+      width: 100%;
+    }
+  }
+
+  .description {
+    width: 41%;
+
+    @include media('<tablet') {
+      width: 100%;
+    }
+  }
+}
+
+.articles {
+  @include adaptive-value('padding-top', 65, 30, 1);
+  @include adaptive-value('padding-bottom', 65, 30, 1);
+
+  .title {
+    color: $black30;
+    @include adaptive-value('font-size', 48, 36, 1);
+    font-weight: 800;
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    @include adaptive-value('padding-bottom', 65, 30, 1);
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+
+    @include media('<desktop') {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 7px solid $gray;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      @include media('<desktop') {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .article_img {
+    width: 44%;
+    height: 100%;
+
+    @include media('<desktop') {
+      width: 70%;
+    }
+
+    @include media('<tablet') {
+      width: 75%;
+    }
+
+    @include media('<phone') {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .article_content {
+    width: 54%;
+
+    @include media('<desktop') {
+      width: 100%;
+    }
+  }
+
+  .article_title {
+    color: $pink;
+    @include adaptive-value('font-size', 36, 24, 1);
+    font-weight: 800;
+    line-height: 120%;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .article_text {
+    color: $black30;
+    font-size: 16px;
+    line-height: 125%;
+  }
+
+  .permalink {
+    font-weight: 800;
+    text-decoration: underline;
+  }
+}
+
+.contact {
+  @include adaptive-value('padding-top', 65, 30, 1);
+  @include adaptive-value('padding-bottom', 65, 30, 1);
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .contact_img {
+    width: 48%;
+
+    @include media('<desktop') {
+      display: none;
+    }
+  }
+
+  .contact_form {
+    width: 51%;
+    background-color: $orange;
+    @include adaptive-value('padding-top', 30, 15, 1);
+    @include adaptive-value('padding-bottom', 30, 15, 1);
+    @include adaptive-value('padding-left', 30, 15, 1);
+    @include adaptive-value('padding-right', 30, 15, 1);
+    text-align: center;
+
+    @include media('<desktop') {
+      width: 100%;
+    }
+  }
+
+  .form_title {
+    color: $green;
+    @include adaptive-value('font-size', 26, 24, 1);
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  .input_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .label_name {
+    color: $green;
+    @include adaptive-value('font-size', 20, 16, 1);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .input_data,
+  .input_area {
+    width: 100%;
+    border-radius: 7px;
+    background-color: $white;
+    padding: 8px;
+    height: 60px;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  .input_area {
+    margin-bottom: 30px;
+    height: 150px;
+  }
+
+  .form_btn {
+    background-color: $green;
+    border: none;
+    padding: 10px 8px;
+    width: 170px;
+    color: $white;
+    @include adaptive-value('font-size', 24, 18, 1);
+    font-weight: 800;
+  }
+}
+
+.post_page {
+  .container {
+    max-width: 975px;
+  }
+
+  .content{
+    text-align: center;
+  }
+
+  .post_title {
+    color: $pink;
+    text-align: center;
+    @include adaptive-value('font-size', 36, 24, 1);
+    font-weight: 800;
+    line-height: 122%;
+  }
+
+  img {
+    max-width: 690px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  p {
+    color: $black;
+    font-size: 16px;
+    line-height: 125%;
+    text-align: start
+  }
+
+  .post_title,
+  img,
+  p {
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+  }
+}
