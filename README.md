@@ -22,3 +22,5 @@
 
 12.RidePusle: https://boskolife.github.io/Scooters/RidePusle/dist/index.html
 
+13.GlideGroove: https://boskolife.github.io/Scooters/GlideGroove/dist/index.html
+
