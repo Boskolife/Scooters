@@ -24,3 +24,4 @@
 
 13.GlideGroove: https://boskolife.github.io/Scooters/GlideGroove/dist/index.html
 
+14.ScootScout: https://boskolife.github.io/Scooters/ScootScout/dist/index.html
