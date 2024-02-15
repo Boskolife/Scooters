@@ -1,0 +1,47 @@
+#header {
+    padding: 25px 0;
+    background-color: #232323;
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+        @include media('<desktop'){
+            flex-direction: column;
+        }
+    }
+
+    .left_side {
+        display: flex;
+        align-items: center;
+        @include adaptive-value("gap", 135, 0, 1);
+
+        @include media('<tablet'){
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    .logo {
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .menu_list {
+        display: flex;
+        align-items: center;
+        @include adaptive-value("gap", 45, 20, 1);
+    }
+
+    .menu_link {
+        color: $white;
+        font-size: 16px;
+        font-family: "Raleway";
+    }
+
+    .yellow_btn {
+        color: $black;
+    }
+}
