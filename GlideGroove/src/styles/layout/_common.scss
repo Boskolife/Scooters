@@ -7,6 +7,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #F2F7F5;
 }
 
 main {
@@ -23,16 +24,6 @@ main {
 .main {
   @include adaptive-value('padding-top', 130, 50, 1);
   @include adaptive-value('padding-bottom', 155, 70, 1);
-
-  .main_title {
-    color: $orange;
-    @include adaptive-value('font-size', 36, 24, 1);
-    font-weight: 600;
-    line-height: 120%;
-    @include adaptive-value('margin-bottom', 65, 30, 1);
-    max-width: 945px;
-    width: 100%;
-  }
 
   .text {
     color: $black30;
@@ -93,15 +84,16 @@ main {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    @include adaptive-value('padding-bottom', 65, 30, 1);
-    @include adaptive-value('margin-bottom', 65, 30, 1);
 
+background: #F2F7F5;
     @include media('<desktop') {
       flex-direction: column;
     }
 
     &:not(:last-child) {
       border-bottom: 7px solid $gray;
+      @include adaptive-value('padding-bottom', 65, 30, 1);
+      @include adaptive-value('margin-bottom', 65, 30, 1);
     }
 
     &:nth-child(even) {
@@ -165,95 +157,12 @@ main {
   }
 }
 
-.contact {
-  @include adaptive-value('padding-top', 65, 30, 1);
-  @include adaptive-value('padding-bottom', 65, 30, 1);
-
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-  }
-
-  .contact_img {
-    width: 48%;
-
-    @include media('<desktop') {
-      display: none;
-    }
-  }
-
-  .contact_form {
-    width: 51%;
-    background-color: $orange;
-    @include adaptive-value('padding-top', 30, 15, 1);
-    @include adaptive-value('padding-bottom', 30, 15, 1);
-    @include adaptive-value('padding-left', 30, 15, 1);
-    @include adaptive-value('padding-right', 30, 15, 1);
-    text-align: center;
-
-    @include media('<desktop') {
-      width: 100%;
-    }
-  }
-
-  .form_title {
-    color: $green;
-    @include adaptive-value('font-size', 26, 24, 1);
-    font-weight: 800;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-  }
-
-  .input_wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .label_name {
-    color: $green;
-    @include adaptive-value('font-size', 20, 16, 1);
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-
-  .input_data,
-  .input_area {
-    width: 100%;
-    border-radius: 7px;
-    background-color: $white;
-    padding: 8px;
-    height: 60px;
-    border: none;
-    margin-bottom: 10px;
-  }
-
-  .input_area {
-    margin-bottom: 30px;
-    height: 150px;
-  }
-
-  .form_btn {
-    background-color: $green;
-    border: none;
-    padding: 10px 8px;
-    width: 170px;
-    color: $white;
-    @include adaptive-value('font-size', 24, 18, 1);
-    font-weight: 800;
-  }
-}
-
 .post_page {
   .container {
     max-width: 975px;
   }
 
-  .content{
+  .content {
     text-align: center;
   }
 
@@ -282,5 +191,29 @@ main {
   img,
   p {
     @include adaptive-value('margin-bottom', 65, 30, 1);
+  }
+}
+
+.about {
+  @include adaptive-value('padding-top', 65, 30, 1);
+  @include adaptive-value('padding-bottom', 65, 30, 1);
+
+  .about_title {
+    color: $orange;
+    @include adaptive-value('font-size', 36, 24, 1);
+    font-weight: 600;
+    line-height: 120%;
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+    text-transform: uppercase;
+  }
+
+  .about_text {
+    color: $orange;
+    @include adaptive-value('font-size', 36, 24, 1);
+    font-weight: 600;
+    line-height: 120%;
+    @include adaptive-value('margin-bottom', 65, 30, 1);
+    max-width: 945px;
+    width: 100%;
   }
 }
