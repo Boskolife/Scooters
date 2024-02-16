@@ -1,0 +1,43 @@
+#header {
+    padding: 25px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptive-value("gap", 30, 20, 1);
+    }
+
+    .left_side {
+        display: flex;
+        align-items: center;
+        @include adaptive-value("gap", 65, 20, 1);
+    }
+
+    .logo {
+        max-width: 46px;
+    }
+
+    .menu_list {
+        display: flex;
+        align-items: center;
+        @include adaptive-value("gap", 25, 15, 1);
+    }
+
+    .menu_link {
+        color: $black;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    .orange_btn{
+        @include media('<phone'){
+            padding: 12px;
+        }
+    }
+}
