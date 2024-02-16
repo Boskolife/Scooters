@@ -27,3 +27,5 @@
 14.ScootScout: https://boskolife.github.io/Scooters/ScootScout/dist/index.html
 
 15.MotoMingle: https://boskolife.github.io/Scooters/MotoMingle/dist/index.html
+
+16.GlideGear: https://boskolife.github.io/Scooters/GlideGear/dist/index.html
