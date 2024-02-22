@@ -201,88 +201,6 @@ html {
   }
 }
 
-.contact {
-  padding: 130px 0;
-  @include adaptive-value('padding-top', 130, 50, 1);
-  @include adaptive-value('padding-bottom', 130, 50, 1);
-  background-color: $whiteE2;
-
-  .content {
-    border-radius: 32px;
-    background-color: $purple67;
-    padding: 80px 10px 30px 10px;
-    position: relative;
-    max-width: 795px;
-    width: 100%;
-    margin: 0 auto;
-
-    @include media('<phone') {
-      padding-top: 30px;
-    }
-  }
-
-  .title {
-    color: $red;
-    font-size: 96px;
-    @include adaptive-value('font-size', 96, 48, 1);
-    font-weight: 800;
-    position: absolute;
-    @include adaptive-value('top', -60, 0, 1);
-    @include adaptive-value('left', -105, 100, 1);
-
-    @include media('<phone') {
-      position: static;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 560px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .contact_input,
-  .contact_area {
-    border-radius: 12px;
-    background-color: $whiteE2;
-    margin-bottom: 20px;
-    padding: 8px 12px;
-    font-size: 18px;
-    color: $purple20;
-    width: 100%;
-
-    &::placeholder {
-      color: $purple67;
-      font-size: 18px;
-      font-weight: 600;
-    }
-  }
-
-  .first {
-    margin-bottom: 10px;
-  }
-
-  .contact_area {
-    height: 140px;
-  }
-
-  .contac_btn {
-    border-radius: 12px;
-    background: $purple20;
-    padding: 15px;
-    color: $whiteE2;
-    font-size: 18px;
-    font-weight: 600;
-    border: none;
-    width: 140px;
-  }
-}
-
 .about {
   @include adaptive-value('padding-top', 280, 40, 1);
   @include adaptive-value('padding-bottom', 14, 60, 1);
@@ -319,9 +237,9 @@ html {
     max-width: 795px;
     width: 100%;
     position: absolute;
-    top: -190px;
+    top: -140px;
     @include adaptive-value('left', -75, 185, 1);
-    line-height: 124%;
+    line-height: 100%;
 
     @include media('<desktop') {
       left: 0;
@@ -346,6 +264,7 @@ html {
 
 .post {
   padding: 30px 0 50px 0;
+
   .content {
     max-width: 1190px;
     width: 100%;

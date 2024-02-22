@@ -19,20 +19,20 @@
     justify-content: space-between;
     position: relative;
 
-    @include media('<tablet') {
+    @include media('<phone') {
       flex-direction: column;
     }
   }
 
-  .menu_wrap {
+  .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     gap: 20px;
 
-    @include media('<tablet'){
-        justify-content: center;
+    @include media('<tablet') {
+      justify-content: center;
     }
   }
 
@@ -40,16 +40,15 @@
     display: inline-block;
     max-width: 265px;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
-    @include media('<tablet') {
-      position: static;
-      transform: translate(0);
+    @include media('<phone') {
       margin-bottom: 20px;
     }
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   .menu_link {

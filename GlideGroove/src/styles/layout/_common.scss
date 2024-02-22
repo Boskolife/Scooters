@@ -34,7 +34,6 @@ main {
   .main_text {
     max-width: 780px;
     width: 100%;
-    margin: 0 0 0 auto;
     @include adaptive-value('margin-bottom', 65, 30, 1);
   }
 
@@ -85,7 +84,8 @@ main {
     justify-content: space-between;
     gap: 30px;
 
-background: #F2F7F5;
+    background: #F2F7F5;
+
     @include media('<desktop') {
       flex-direction: column;
     }
@@ -158,6 +158,8 @@ background: #F2F7F5;
 }
 
 .post_page {
+  padding-bottom: 65px;
+
   .container {
     max-width: 975px;
   }
@@ -191,6 +193,19 @@ background: #F2F7F5;
   img,
   p {
     @include adaptive-value('margin-bottom', 65, 30, 1);
+  }
+
+  .post_btn {
+    border-radius: 14px;
+    background: #EF738D;
+    color: #FFF;
+    @include adaptive-value("font-size", 24, 18, 1);
+    font-weight: 800;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    width: 300px;
+    padding: 25px;
+    display: inline-block
   }
 }
 
