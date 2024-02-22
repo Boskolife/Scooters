@@ -1,8 +1,33 @@
+html {
+    scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+
+        @include media('<tablet') {
+            width: 5px;
+        }
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: rgba(255, 226, 121, 0.5);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $yellow;
+        border-radius: 5px;
+    }
+}
+
 .container {
     max-width: 1430px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.body_lock {
+    overflow: hidden;
 }
 
 .yellow_btn {
@@ -19,10 +44,15 @@
     display: flex;
     align-items: center;
     gap: 18px;
+    transition: all .3s ease 0s;
 
     @include media('<phone') {
         padding: 10px 15px;
     }
+}
+
+.yellow_text {
+    color: $yellow;
 }
 
 .main {
@@ -79,10 +109,6 @@
         margin-bottom: 30px;
     }
 
-    .yellow_text {
-        color: $yellow;
-    }
-
     .main_descr {
         color: $white;
         font-family: "Raleway";
@@ -101,6 +127,10 @@
     @include adaptive-value("padding-top", 205, 70, 1);
     @include adaptive-value("padding-bottom", 205, 70, 1);
 
+    .content {
+        text-align: center;
+    }
+
     .title {
         color: $white;
         text-align: center;
@@ -115,7 +145,13 @@
         text-align: center;
         font-family: "Raleway";
         font-size: 16px;
-        @include adaptive-value("margin-bottom", 95, 30, 1);
+        @include adaptive-value("margin-bottom", 65, 30, 1);
+    }
+
+    .yellow_btn {
+        background-color: transparent;
+        margin: 0 auto;
+        @include adaptive-value("margin-bottom", 65, 30, 1);
     }
 
     .gallery_wrap {
@@ -211,7 +247,7 @@
 }
 
 .stories {
-    background-color: $gray;
+    background-color: $black;
     @include adaptive-value("padding-top", 130, 70, 1);
     @include adaptive-value("padding-bottom", 130, 70, 1);
 
@@ -230,7 +266,7 @@
         text-align: center;
         font-family: "Raleway";
         font-size: 16px;
-        @include adaptive-value("margin-bottom", 150, 40, 1);
+        @include adaptive-value("margin-bottom", 90, 40, 1);
     }
 
     .stories_cards {
@@ -360,10 +396,18 @@
     }
 
     .projects_title {
-        color: $white;
+        color: $yellow;
         font-family: "Oswald";
         @include adaptive-value("font-size", 56, 36, 1);
         font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .sub_title {
+        color: #878787;
+        @include adaptive-value("font-size", 32, 22, 1);
+        font-weight: 400;
+        line-height: 120%;
         margin-bottom: 25px;
     }
 
@@ -446,5 +490,99 @@
 
     .yellow_btn {
         color: $black;
+    }
+}
+
+.about {
+    @include adaptive-value("padding-top", 130, 70, 1);
+    @include adaptive-value("padding-bottom", 130, 70, 1);
+    background-color: $black;
+
+    .content {
+        text-align: center;
+    }
+
+    .title {
+        color: #FFF;
+        @include adaptive-value("font-size", 24, 20, 1);
+        font-weight: 400;
+        @include adaptive-value("margin-bottom", 100, 40, 1);
+    }
+
+    .logo {
+        width: 100%;
+        @include adaptive-value("margin-bottom", 100, 40, 1);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text {
+        color: #F4F4F4;
+        @include adaptive-value("font-size", 24, 18, 1);
+        line-height: 200%;
+        text-align: start;
+    }
+}
+
+.topic_content {
+    padding: 65px 0;
+    background-color: $black;
+
+    .title {
+        color: #F4F4F4;
+        @include adaptive-value("font-size", 80, 36, 1);
+        font-family: "Oswald";
+        font-weight: 700;
+        line-height: 115%;
+        @include adaptive-value("margin-bottom", 65, 30, 1);
+        max-width: 1075px;
+        width: 100%;
+    }
+
+    h3 {
+        color: #F4F4F4;
+        font-family: "Raleway";
+        @include adaptive-value("font-size", 36, 24, 1);
+        font-weight: 400;
+        line-height: 133%;
+        @include adaptive-value("margin-bottom", 65, 30, 1);
+    }
+
+    p {
+        color: #F4F4F4;
+        font-family: "Raleway";
+        @include adaptive-value("font-size", 24, 18, 1);
+        line-height: 200%;
+        @include adaptive-value("margin-bottom", 65, 30, 1);
+    }
+}
+
+.legends_stories {
+
+    .descr {
+        margin-bottom: 55px;
+    }
+
+    .card {
+        border-radius: 9px;
+        border: 1px solid #919191;
+    }
+}
+
+.group_page {
+    padding: 65px 0;
+
+    .content {
+        @include adaptive-value("padding-top", 260, 70, 1);
+        @include adaptive-value("padding-bottom", 260, 70, 1);
+    }
+}
+
+.stories_page {
+    .card {
+        border-radius: 9px;
+        border: 1px solid #919191;
     }
 }

@@ -8,7 +8,7 @@
         justify-content: space-between;
         gap: 30px;
 
-        @include media('<desktop'){
+        @include media('<desktop') {
             flex-direction: column;
         }
     }
@@ -18,7 +18,7 @@
         align-items: center;
         @include adaptive-value("gap", 135, 0, 1);
 
-        @include media('<tablet'){
+        @include media('<tablet') {
             flex-direction: column;
             gap: 30px;
         }
@@ -43,5 +43,93 @@
 
     .yellow_btn {
         color: $black;
+    }
+
+    .topics {
+        position: relative;
+    }
+
+    .topics_list {
+        position: fixed;
+        background-color: $black;
+        z-index: 2;
+        padding: 32px;
+        border-radius: 5px;
+        max-width: 590px;
+        width: 100%;
+        top: 20px;
+        left: 50%;
+        transform: scale(0) translateX(-50%);
+        transition: all .3s ease 0s;
+        overflow: auto;
+        height: 100%;
+    }
+
+    .topic_active {
+        transform: scale(1) translateX(-50%);
+        transition: all .3s ease 0s;
+    }
+
+    .topics_item {
+        @include adaptive-value("padding-bottom", 30, 20, 1);
+        @include adaptive-value("margin-bottom", 30, 20, 1);
+        border-bottom: 1px solid $yellow;
+    }
+
+    .title_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        @include adaptive-value("margin-bottom", 30, 20, 1);
+    }
+
+    .topics_title {
+        color: $white;
+        font-family: "Oswald";
+        @include adaptive-value("font-size", 32, 24, 1);
+        font-weight: 600;
+    }
+
+    .close_element {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $yellow;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .topics_link {
+        color: $yellow;
+        font-family: "Oswald";
+        @include adaptive-value("font-size", 24, 18, 1);
+        font-weight: 600;
+        line-height: 115%;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+    .topics_text {
+        color: $yellow;
+        font-size: 16px;
+        line-height: 136%;
     }
 }
