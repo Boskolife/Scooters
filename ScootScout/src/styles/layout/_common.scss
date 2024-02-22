@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: $white;
+}
+
 .container {
     max-width: 1340px;
     width: 100%;
@@ -20,6 +24,14 @@ html {
     border: 1px solid $white;
     padding: 16px 32px;
     width: max-content;
+    transition: all .3s ease 0s;
+
+    &:hover {
+        background-color: #FFF;
+        border-color: #740013;
+        color: #740013;
+        transition: all .3s ease 0s;
+    }
 
     .arrow {
         width: 28px;
@@ -73,6 +85,7 @@ html {
         @include adaptive-value("font-size", 35, 22, 1);
         line-height: 150%;
         letter-spacing: 1px;
+        margin-bottom: 25px
     }
 }
 
@@ -127,10 +140,11 @@ html {
 }
 
 .tips {
-    @include adaptive-value("padding-top", 120, 70, 1);
-    @include adaptive-value("padding-bottom", 120, 70, 1);
+    @include adaptive-value("padding-top", 220, 70, 1);
+    @include adaptive-value("padding-bottom", 220, 70, 1);
     position: relative;
     height: 100%;
+    margin-bottom: -45px;
 
     .container {
         height: 100%;
@@ -150,8 +164,10 @@ html {
         position: relative;
         z-index: 1;
         display: flex;
+        align-items: center;
         justify-content: space-between;
         height: 100%;
+        gap: 30px;
 
         @include media('<tablet') {
             flex-direction: column;
@@ -159,14 +175,21 @@ html {
         }
     }
 
+    .logo {
+        max-width: 435px;
+        width: 100%;
+    }
+
     .tips_text {
-        width: 41%;
+        width: 45%;
         display: flex;
         flex-direction: column;
         height: 100%;
 
         @include media('<tablet') {
             width: 100%;
+            text-align: center;
+            align-items: center;
         }
     }
 
@@ -176,7 +199,7 @@ html {
         font-weight: 600;
         line-height: 120%;
         text-transform: uppercase;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
     .tips_descr {
@@ -184,34 +207,7 @@ html {
         @include adaptive-value("font-size", 20, 16, 1);
         line-height: 150%;
         letter-spacing: 1px;
-        @include adaptive-value("margin-bottom", 160, 30, 1);
-    }
-
-    .tips_links {
-        width: 49%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-        padding: 30px 0;
-
-        @include media('<tablet') {
-            width: 100%;
-            padding: 0;
-        }
-    }
-
-    .link {
-        color: $white;
-        @include adaptive-value("font-size", 24, 18, 1);
-        font-weight: 600;
-        text-transform: uppercase;
-        padding-bottom: 25px;
-        width: 100%;
-
-        &:not(:last-child) {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        }
+        margin-bottom: 15px
     }
 }
 
@@ -219,36 +215,21 @@ html {
     @include adaptive-value("padding-top", 120, 70, 1);
     @include adaptive-value("padding-bottom", 60, 35, 1);
     background-color: $white;
-
-    .title_wrap {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 30px;
-        @include adaptive-value("margin-bottom", 55, 25, 1);
-
-        @include media('<tablet') {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    }
+    border-radius: 40px 40px 0px 0px;
+    position: relative;
 
     .title {
         color: #1D1D21;
         @include adaptive-value("font-size", 56, 36, 1);
-        font-weight: 600;
+        font-weight: 400;
         line-height: 120%;
         text-transform: uppercase;
-        max-width: 540px;
-        width: 100%;
-    }
+        text-align: center;
+        @include adaptive-value("margin-bottom", 85, 35, 1);
 
-    .descr {
-        color: $gray;
-        @include adaptive-value("font-size", 20, 16, 1);
-        letter-spacing: 1px;
-        max-width: 530px;
-        width: 100%;
+        .bold {
+            font-weight: 600;
+        }
     }
 
     .card_wrap {
@@ -260,6 +241,17 @@ html {
     .card {
         @include adaptive-value("height", 610, 330, 1);
         position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(16, 16, 16, 0.40);
+            z-index: 1;
+        }
     }
 
     .card_img {
@@ -273,6 +265,7 @@ html {
 
     .card_text {
         position: relative;
+        z-index: 2;
         height: 100%;
         padding: 40px 30px;
         display: flex;
@@ -289,7 +282,6 @@ html {
 .history {
     @include adaptive-value("padding-top", 60, 35, 1);
     @include adaptive-value("padding-bottom", 120, 70, 1);
-    border-radius: 0px 0px 40px 40px;
     background: $white;
     position: relative;
     z-index: 1;
@@ -298,17 +290,13 @@ html {
         color: #1D1D21;
         text-align: center;
         @include adaptive-value("font-size", 56, 36, 1);
-        font-weight: 600;
+        font-weight: 400;
         text-transform: uppercase;
-        margin-bottom: 8px;
-    }
+        margin-bottom: 50px;
 
-    .descr {
-        color: $gray;
-        text-align: center;
-        @include adaptive-value("font-size", 20, 16, 1);
-        letter-spacing: 1px;
-        @include adaptive-value("margin-bottom", 60, 30, 1);
+        .bold {
+            font-weight: 600;
+        }
     }
 
     .cards_wrap {
@@ -326,17 +314,6 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 25px;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(16, 16, 16, 0.00) 0%, #101010 100%);
-        }
 
         &:nth-child(2) {
             grid-column: span 2;
@@ -356,52 +333,18 @@ html {
         }
     }
 
-    .arrow {
-        position: relative;
-        z-index: 1;
-        width: 108px;
-        height: 108px;
-    }
-
-    .card_content {
-        position: relative;
-        z-index: 1;
-    }
-
-    .title_wrap {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 15px;
-    }
-
-    .icon {
-        width: 24px;
-        height: 24px;
-        background-color: #D9D9D9;
-        border-radius: 50%;
-    }
-
-    .card_title {
-        color: $white;
-        font-size: 16px;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-
-    .card_descr {
-        color: $white;
-        font-size: 14px;
-        line-height: 120%;
-        letter-spacing: 1px;
+    .card_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
     }
 }
 
 .budget {
     position: relative;
-    margin-top: -40px;
-    height: 730px;
-    @include adaptive-value("height", 730, 400, 1);
+    @include adaptive-value("padding-top", 250, 100, 1);
+    @include adaptive-value("padding-bottom", 190, 70, 1);
     background-color: #740013;
 
     .budget_bg {
@@ -427,11 +370,14 @@ html {
         flex-direction: column;
         height: 100%;
         z-index: 1;
+        max-width: 865px;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .title {
         text-align: center;
-        @include adaptive-value("font-size", 72, 48, 1);
+        @include adaptive-value("font-size", 72, 26, 1);
         font-weight: 600;
         text-transform: uppercase;
         margin-bottom: 15px;
@@ -439,8 +385,213 @@ html {
 
     .descr {
         text-align: center;
-        @include adaptive-value("font-size", 20, 18, 1);
+        @include adaptive-value("font-size", 56, 22, 1);
         letter-spacing: 1px;
-        @include adaptive-value("margin-bottom", 80, 40, 1);
+        margin-bottom: 35px;
+        text-transform: uppercase;
     }
+}
+
+.trouble {
+    .content {
+        max-width: 1230px;
+    }
+}
+
+.repair {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $white;
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 50px;
+
+        @include media('<desktop') {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    .text {
+        width: 48%;
+        @include adaptive-value("padding-left", 70, 0, 1);
+
+        @include media('<desktop') {
+            width: 100%;
+            padding: 35px 15px;
+        }
+    }
+
+    .title {
+        color: #000;
+        @include adaptive-value("font-size", 56, 36, 1);
+        font-weight: 400;
+        line-height: 115%;
+        font-family: "Open Sans";
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        max-width: 570px;
+        width: 100%;
+
+        @include media('<desktop') {
+            max-width: 100%;
+        }
+
+        .bold {
+            font-weight: 600;
+        }
+    }
+
+    .main_btn {
+        border-color: #000;
+        color: #000;
+        text-transform: uppercase;
+        transition: all .3s ease 0s;
+
+        &:hover {
+            background-color: #740013;
+            border-color: #740013;
+            color: #fff;
+            transition: all .3s ease 0s;
+        }
+    }
+
+    .repair_img {
+        width: 51%;
+        @include adaptive-value("height", 750, 350, 1);
+
+        @include media('<desktop') {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.impact {
+    .content {
+        flex-direction: row-reverse;
+
+        @include media('<desktop') {
+            flex-direction: column;
+        }
+    }
+
+    .text {
+        width: 48%;
+        padding-left: 0;
+        @include adaptive-value("padding-right", 70, 0, 1);
+
+
+        @include media('<desktop') {
+            width: 100%;
+            padding: 35px 15px;
+        }
+    }
+
+    .title {
+        font-weight: 600;
+    }
+}
+
+.about {
+    @include adaptive-value("padding-top", 130, 50, 1);
+    @include adaptive-value("padding-bottom", 130, 50, 1);
+    background-color: #000;
+
+    .title {
+        color: #FFF;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        @include adaptive-value("margin-bottom", 55, 30, 1);
+        text-align: center;
+    }
+
+    .logo {
+        max-width: 864px;
+        width: 100%;
+        margin: 0 auto;
+        @include adaptive-value("margin-bottom", 55, 30, 1);
+    }
+
+    .text {
+        color: #FFF;
+        @include adaptive-value("font-size", 24, 18, 1);
+        font-weight: 400;
+        line-height: 200%;
+        max-width: 1075px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.about_page {
+    padding: 80px 0 60px 0;
+    background-color: #FFF;
+
+    .title,
+    .text {
+        color: #000;
+    }
+}
+
+.topics_content {
+    background-color: #fff;
+    padding: 65px 0;
+
+    .title {
+        color: #000;
+        font-family: "Open Sans";
+        @include adaptive-value("font-size", 80, 36, 1);
+        font-weight: 400;
+        line-height: 115%;
+        @include adaptive-value("margin-bottom", 65, 30, 1);
+        max-width: 1095px;
+        width: 100%;
+
+        .bold {
+            font-weight: 700;
+        }
+    }
+
+    .subtitle {
+        color: #000;
+        @include adaptive-value("font-size", 36, 24, 1);
+        font-weight: 400;
+        line-height: 133%;
+        @include adaptive-value("margin-bottom", 65, 30, 1);
+    }
+
+    .text {
+        color: #000;
+        @include adaptive-value("font-size", 24, 18, 1);
+        line-height: 200%;
+        @include adaptive-value("margin-bottom", 65, 30, 1);
+    }
+}
+
+.tips_page {
+    margin: 0;
+}
+
+.buy_subpage {
+    margin-top: -45px;
+    position: relative;
+    z-index: 2;
+    border-radius: 40px 40px 0px 0px;
+    box-shadow: 0px -35px 35px 0px rgba(0, 0, 0, 0.25);
+}
+
+.buy_page {
+    border-radius: 0px;
 }
