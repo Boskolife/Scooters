@@ -1,4 +1,4 @@
-#header {
+.header {
     padding: 25px 0;
     position: absolute;
     top: 0;
@@ -35,9 +35,18 @@
         text-transform: capitalize;
     }
 
-    .orange_btn{
-        @include media('<phone'){
+    .orange_btn {
+        @include media('<phone') {
             padding: 12px;
         }
+    }
+}
+
+.header_blue {
+    position: static;
+    background-color: $blue;
+
+    .menu_link {
+        color: $white;
     }
 }

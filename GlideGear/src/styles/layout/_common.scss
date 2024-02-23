@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     max-width: 1190px;
     width: 100%;
@@ -18,6 +22,11 @@
     position: relative;
     @include adaptive-value("padding-bottom", 130, 50, 1);
     @include adaptive-value("padding-left", 140, -140, 1);
+
+    .container {
+        max-width: 1470px;
+        padding-right: 0;
+    }
 
     @include media('<desktop') {
         padding: 0 15px;
@@ -207,6 +216,15 @@
         position: relative;
     }
 
+    .permalink {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
     .article_img {
         position: absolute;
         top: 0;
@@ -290,7 +308,7 @@
             width: 100%;
         }
 
-        @include media('<tablet'){
+        @include media('<tablet') {
             flex-direction: column;
             align-items: center;
         }
@@ -311,7 +329,7 @@
             width: 100%;
         }
 
-        @include media('<tablet'){
+        @include media('<tablet') {
             max-width: max-content;
         }
 
@@ -424,6 +442,58 @@
         color: $gray;
         font-size: 18px;
         line-height: 166%;
-        margin-bottom: 50px;
+    }
+}
+
+.about_page {
+    .container {
+        max-width: 1155px;
+    }
+
+    .content {
+        margin-bottom: 65px;
+    }
+
+    .text {
+        color: #222;
+        @include adaptive-value("font-size", 24, 18, 1);
+        line-height: 200%;
+    }
+}
+
+.post_page {
+    @include adaptive-value("padding-top", 65, 40, 1);
+    @include adaptive-value("padding-bottom", 75, 30, 1);
+
+    .content {
+        align-items: center;
+    }
+}
+
+.post_content {
+    padding-bottom: 50px;
+
+    .title {
+        color: #201F21;
+        @include adaptive-value("font-size", 48, 36, 1);
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    p {
+        color: #222;
+        @include adaptive-value("font-size", 24, 18, 1);
+        line-height: 200%;
+        margin-bottom: 25px;
+    }
+}
+
+.more_blogs {
+    padding-top: 40px;
+    background-color: $white;
+
+    .blog_title {
+        color: $black;
+        @include adaptive-value("margin-bottom", 90, 35, 1);
     }
 }
